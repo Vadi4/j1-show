@@ -1,0 +1,28 @@
+extends template.pug
+
+block title
+	title contacts
+	- var page_class = 'p-contacts top-right';
+	- var page_bg = '../img/ring-draw6.jpg';
+
+block content
+	.l-container
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2 Контакты
+		+b('').text_contacts
+			p <b>Организатор:</b> ООО «Выставочная компания Джей Уан»
+			p <b>Организатор:</b> ООО «Выставочная компания Джей Уан»
+			p <b>Организатор:</b> ООО «Выставочная компания Джей Уан»
+		+b('').cards-list
+			+e('').cols-wrap
+				- for(var i = 0; i < 11; i++)
+					+e('').col
+						+b('article').card
+							+e('').img-wrap
+								+e('img')(src="http://placehold.it/500x500" width="500" height="500").img
+							+e('').body
+								+b('span').title-2.b-card__title Закиров Константин
+								+e('span').caption Президент выставки
+								+e('').profile-content
+									+e('span').contact zakirov@j-1.show

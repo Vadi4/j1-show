@@ -1,0 +1,81 @@
+extends template.pug
+
+block title
+	title text
+	- var page_class = 'p-text';
+
+block content
+	.l-container
+		+b('section').section.nope-test
+			include partials/nav
+			include partials/breadcrumbs
+			+menu('main', 'Главная', 'Отзывы', 'Еще какой-то пункт меню')
+			p <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis suscipit quis optio quo perferendis quibusdam, hic quidem sed voluptate recusandae fuga harum sint ad nobis veniam minus, voluptas molestias vitae!</em>
+			img(src="http://placehold.it/200x100", alt="")._img-left
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam similique vitae perferendis natus quidem obcaecati quasi quas animi ex iusto impedit numquam dolores a blanditiis, quod fugiat debitis dolorum, atque! Reprehenderit, inventore incidunt neque magnam adipisci vitae, a possimus ab ex optio similique et impedit cupiditate corporis sequi ratione harum delectus error dolor officiis! Qui odit nihil cum. Officia esse ipsa ut rem, officiis. Veritatis non atque unde, corporis aut tenetur harum omnis. Ducimus quis excepturi nam debitis atque unde dolore rem in voluptate, nemo! Obcaecati facilis est corrupti perspiciatis nostrum, dolor, quas cupiditate, beatae necessitatibus consequatur dolores quidem perferendis!
+			img(src="http://placehold.it/200x100", alt="")._img-right
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam expedita id temporibus aperiam facere corporis voluptate, adipisci placeat laboriosam, reiciendis optio velit mollitia itaque sit. Laboriosam, molestias, saepe. Obcaecati, mollitia.
+			table
+				tr
+					th Параметр 
+					th Параметр
+					th Параметр
+					th Параметр
+				tr
+					td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+					td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+					td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+					td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+				tr
+					td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+					td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+					td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+					td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+				tr
+					td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+					td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+					td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+					td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+			h1 Заголовок 1
+			h2 Заголовок 2
+			h3 Заголовок 3
+			h4 Заголовок 4
+			h5 Заголовок 5
+			ul
+				li Список
+				li Список
+				li Список
+				li Список
+				li Список
+			ol
+				li Нумерованный список
+				li Нумерованный список
+				li Нумерованный список
+				li Нумерованный список
+				li Нумерованный список
+			p
+				+b('').checkbox
+					+e('input')(type='checkbox' id='checkbox_1').input
+					+e('label')(for='checkbox_1').label custom checkbox
+			p
+				+b('').radiobox
+					+e('input')(type='radio' id='radio_1' name='radio').input
+					+e('label')(for='radio_1').label custom radiobox
+			p
+				+b('input')(type="text").input
+			p
+				+b('textarea').textarea
+			p
+				+b('select').select
+					option select
+					option select
+					option select
+			ul
+				li
+					+b('a')(href='#').btn_md._red Кнопка
+				li
+					+b('a')(href='#').btn_lg._base Кнопка 2
+
+			include partials/pagination
+
+

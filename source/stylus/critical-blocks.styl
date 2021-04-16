@@ -1,0 +1,214 @@
+.l-common-wrap
+	padding-bottom 100px
+	position relative
+	overflow hidden
+
+.l-container
+	max-width 1160px
+	width 100%
+	margin 0 auto
+	position relative
+	padding 0 10px
+	
+.l-header
+	position relative
+	&__container
+		padding-top 10px
+		padding-bottom 10px
+		display flex
+		align-items center
+		flex-wrap wrap
+		flex-direction column
+		@media $min_xsm
+			flex-direction row
+			padding-right 46px
+		@media $min_md
+			flex-wrap nowrap
+			padding-right 0
+	&__logo
+		width 46px
+		@media $min_md
+			width 52px
+			margin-right 20px
+			
+.b-burger
+	display inline-flex
+	height 30px
+	width 30px
+	align-items center
+	justify-content center
+	text-decoration none
+	padding 6px
+	background-color rgba(0,0,0,.05)
+	border-radius 3px
+	color $base
+	margin 20px auto
+	@media $min_xsm
+		margin 0 auto
+	@media $min_md
+		display none
+	.fa-times
+		display none
+	&.js-act
+		.fa-times
+			display block
+		.fa-bars
+			display none
+			
+.b-hero
+	margin 160px 0px 60px 0px
+	&__title-2
+		&.b-title-2
+			font-size 35px
+			font-weight 300
+			margin 5px 0
+	&__title-wrap
+		text-align center
+		&:before,
+		&:after
+			content ''
+			width 2px
+			height 30px
+			background-color #331133
+			display inline-block
+
+.b-header-nav
+	display none
+	flex-basis 100%
+	width 100%
+	@media $min_md
+		display flex
+	&__link
+		text-decoration none
+		color $base
+		font-family 'Comfortaa'
+		font-weight 200
+		position relative
+		display inline-flex
+		justify-content space-between
+		width 100%
+		align-items center
+		padding 10px 20px
+		font-size 15px
+		@media $min_md
+			width auto
+			padding 13px 20px
+			font-size 18px
+			&:before,
+			&:after
+				content ''
+				position absolute
+				width 3px
+				height 3px
+				border-style solid
+				background transparent
+				opacity 0
+			&:before
+				left 0
+				top 0
+				bottom 0
+				right 0
+				transition width .1s .2s,height .1s .3s,opacity .12s .22s
+				border-width 0 0 1px 1px
+			&:after
+				top auto
+				bottom 0
+				left auto
+				right 0
+				transition width .1s,height .1s .1s,opacity .02s .18s
+				border-width 1px 1px 0 0
+			&:hover,
+			&_act
+				border-color $base
+				&:before
+					border-width 0 0 1px 1px
+					transition opacity .02s,height .1s,width .1s .1s
+				&:after
+					border-width 1px 1px 0 0
+					transition opacity .02s .2s,height .1s .2s,width .1s .3s
+				&:before,
+				&:after
+					opacity 1
+					width 100%
+					height 100%
+	&__sub-arrow
+		font-size 14px
+		padding 3px 0 3px 10px
+		transform translateY(2px)
+	&__wrap
+		position relative
+		@media $min_md
+			&:hover
+				.b-header-nav
+					&__dropdown-wrap
+						opacity 1
+						visibility visible
+						transition-delay 0s
+	&__dropdown-wrap
+		background-color #fff
+		z-index 1
+		padding-left 8px
+		display none
+		&.js-act
+			display block		
+		@media $min_md
+			padding-left 0
+			position absolute
+			top 100%
+			left 0
+			min-width 100%
+			opacity 0
+			visibility hidden
+			transition-delay .5s
+	&__dropdown-item-wrap
+		position relative
+		@media $min_md
+			&:hover
+				.b-header-nav
+					&__side-dropdown
+						opacity 1
+						visibility visible
+						transition-delay 0s
+	&__side-dropdown
+		background-color #fff
+		padding-left 8px
+		display none
+		&.js-act
+			display block
+		@media $min_md
+			display block
+			padding 0
+			position absolute
+			left 100%
+			top 0
+			opacity 0
+			visibility hidden
+			transition-delay .5s
+	&__sublink
+		display inline-flex
+		justify-content space-between
+		width 100%
+		font-size 15px
+		line-height 1.4
+		font-weight 200
+		font-family 'Comfortaa'
+		padding 10px 20px
+		color $base
+		text-decoration none
+		transition .25s opacity
+		white-space nowrap
+		@media $min_md
+			width auto
+			line-height 1.3
+		@media $working_hover
+			&:hover
+				opacity .7
+		.b-header-nav
+			&__sub-arrow
+				@media $min_md
+					transform translateY(-1px)
+	.fa-chevron-right
+		transform rotate(90deg)
+		@media $min_md
+			transform none
+		

@@ -1,0 +1,171 @@
+.l-footer
+	width 100%
+	margin-top auto
+	margin-bottom 0
+	position relative
+	
+.b-logo
+	display inline-flex
+	&__img
+		width 100%
+		height auto
+		
+.b-scroll-top
+	position fixed
+	right 20px
+	bottom 20px
+	cursor pointer
+	
+.l-footer
+	background-color #4A4242
+	padding 30px 0 50px
+	color #fff
+	&__logo
+		width 170px
+		margin 0 auto
+		filter brightness(0) invert(1)
+		@media $min_xsm
+			max-width 370px
+			width 100%
+			margin 0
+		@media $min_md
+			max-width 215px
+	&__col
+		display flex
+		flex-direction column
+		padding-bottom 60px
+		@media $min_md
+			padding-bottom 0
+		&:first-child
+			@media $min_xsm
+				flex-basis 40%
+				max-width 40%
+				padding-right 40px
+			@media $min_md
+				flex-basis 27%
+				max-width 27%
+		&:nth-child(2)
+			@media $min_xsm
+				flex-basis 60%
+				max-width 60%
+			@media $min_md
+				flex-basis 45%
+				max-width 45%
+				padding-right 40px
+		&:last-child
+			padding-bottom 0
+			@media $min_xsm
+				flex-basis 28%
+				max-width 28%
+	&__social
+		&.b-social
+			margin-top 15px
+	&__container
+		@media $min_xsm
+			display flex
+			flex-wrap wrap
+			
+.b-text
+	&_contacts
+		color $gray
+		margin-bottom 70px
+		p
+			margin 0
+			
+.b-cards-list
+	colsWrapFlex(1, 30, 60)
+	overflow visible
+	@media $min_sm
+		colsWrapFlex(2, 30, 60)
+		overflow visible
+	@media $min_md
+		colsWrapFlex(3, 30, 80)
+		overflow visible
+	.b-card
+		height 100%
+	&__col
+		position relative
+	
+.b-card
+	padding 40px 25px
+	background-color #fff
+	box-shadow 0px 28px 40px 0px rgba(0 0 0 .1)
+	transition all 0.4s ease
+	&:hover
+		transform translateY(-5px)
+		box-shadow 30px 30px 60px 0px rgba(0 0 0 .3)
+		.b-card
+			&__img
+				transform scale(1.03)
+			&__caption
+				$base
+	&__img-wrap
+		width 250px
+		height 250px
+		margin 0 auto
+	&__img
+		width 100%
+		height auto
+		border-radius 50%
+		transition all 0.4s ease
+	&__body
+		margin-top 60px
+		text-align center
+	&__title
+		&.b-title-2
+			font-size 22px
+			font-family 'Montserrat'
+			font-weight 700
+			margin-bottom 6px
+	&__profile-content
+		margin-top 30px
+		min-height 80px
+	&__caption
+		font-size 15px
+		color rgba(1,0,0,0.5)
+		transition all 0.4s ease
+	&__contact
+		color #CACACA
+			
+.b-footer-contacts
+	&__row
+		margin-bottom 14px
+		display flex
+		align-items start
+		&:last-child
+			margin-bottom 0
+		.fa
+			flex-shrink 0
+			font-size 22px
+	&__text
+		padding-left 15px
+		display block
+		line-height 1.5
+		font-size 16px
+		&_nopad
+			padding 0
+			
+.b-social
+	display flex
+	margin -5px
+	&__item
+		margin 5px
+		display inline-flex
+		align-items center
+		justify-content center
+		width 40px
+		height 40px
+		border-radius 50%
+		border 1px solid #5e6d7e
+		color #fff
+		font-size 18px
+		text-decoration none
+		
+.b-copy-text
+	margin-top 40px
+	text-align center
+	font-weight 400
+	font-family 'Lato'
+	font-size 16px
+	@media $min_xsm
+		text-align left

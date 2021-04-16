@@ -1,0 +1,21 @@
+include ../../node_modules/bemto.pug/bemto
+include helpers/variables
+include helpers/mixins
+
+doctype html
+html
+	head
+		block title
+		include inc/head
+	body(class="" +page_class style="background-image: url("+page_bg+")")
+		include partials/header
+		
+		.l-common-wrap
+			block content
+
+		include partials/popups
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")
+		script(src="js/alerts.min.js")
+

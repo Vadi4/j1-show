@@ -1,0 +1,34 @@
+footer.l-footer
+	.l-container.l-footer__container
+		.l-footer__col
+			+b('a')(href="#").logo.nope-l-footer__logo
+				+e('img')(src="../img/new-logo.png").img
+		.l-footer__col
+			+b('article').footer-contacts
+				+b('span').title-2.b-footer-contacts__title Контакты
+				+e('').row
+					i.fa.fa-calendar-alt
+					+e('span').text С 26 по 28 сентября 2021 года
+				+e('').row
+					i.fa.fa-map-marked-alt
+					+e('span').text Выставочный комплекс "Гостиный двор",  Москва, ул. Ильинка, 4
+				+e('').row
+					i.fa.fa-phone-alt
+					+e('span').text +7 (495) 778-80-88
+				+e('').row
+					i.fa.fa-envelope
+					+e('span').text expo@j-1.show
+		.l-footer__col
+			+b('article').footer-contacts
+				+b('span').title-2.b-footer-contacts__title Мы в соцсетях
+				+e('span').text_nopad Не пропустите важные новости. Подпишитесь на наш канал!
+			+b('').social.nope-l-footer__social
+				+e('a')(href="#").item
+					i.fa.fa-facebook-f
+				+e('a')(href="#").item
+					i.fa.fa-instagram
+			+e('p').copy-text ©2020. j-1.show. All Rights Reserved.
+
+
++b('a').scroll-top.js-scroll-top
+	+e('img')(src="../img/arr-top.png").img

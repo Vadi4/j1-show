@@ -1,0 +1,48 @@
+header.l-header
+	.l-container.l-header__container
+		+b('a')(href="#").logo.nope-l-header__logo
+			+e('img')(src="../img/new-logo.png" alt="Международная ювелирная выставка-конгресс «J1»").img
+		+b('a')(href="#").burger.js-burger
+			i.fa.fa-bars
+			i.fa.fa-times
+		+b('nav').header-nav
+			+e('').wrap
+				+e('a')(href="#").link.js-dropdown-link
+					span О выставке
+					+e('span').sub-arrow
+						i.fa.fa-chevron-down
+				+e('').dropdown-wrap
+					+e('').dropdown-item-wrap
+						+e('a')(href="#").sublink История J-1
+					+e('').dropdown-item-wrap
+						+e('a')(href="#").sublink Новости
+					+e('').dropdown-item-wrap
+						+e('a')(href="#").sublink.js-dropdown-link
+							span Конгресс
+							+e('span').sub-arrow
+								i.fa.fa-chevron-right
+						+e('').side-dropdown
+							+e('a')(href="#").sublink О когрессе
+							+e('a')(href="#").sublink Программа конгресса
+							+e('a')(href="#").sublink Спикеры
+							+e('a')(href="#").sublink Записи трансляции
+					+e('').dropdown-item-wrap
+						+e('a')(href="#").sublink Конкурс
+							+e('span').sub-arrow
+								i.fa.fa-chevron-right
+			+e('').wrap
+				+e('a')(href="#").link
+					span Посетителям
+					+e('span').sub-arrow
+						i.fa.fa-chevron-down
+			+e('').wrap
+				+e('a')(href="#").link
+					span Экспонентам
+					+e('span').sub-arrow
+						i.fa.fa-chevron-down
+			+e('').wrap
+				+e('a')(href="#").link
+					span Каталог выставки
+			+e('').wrap
+				+e('a')(href="#").link_act
+					span Контакты

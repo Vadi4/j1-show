@@ -1,0 +1,9 @@
+mixin svg-icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="img/sprite.svg#" + name)
+
+mixin menu(subclass, ...items)
+	+b(class="b-menu-" + subclass)
+		each item in items
+			+e('a')(href="#").item= item
