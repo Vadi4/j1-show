@@ -1,0 +1,26 @@
+extends template.pug
+
+block title
+	title history
+	- var page_class = 'p-history top-right';
+	- var page_bg = '../img/ring-draw6.jpg';
+
+block content
+	.l-container
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2 История J-1
+		+b('').elementor-widget-container
+			+b('').elementor-gallery__titles-container
+				+e('a')(href='#').title-item.elementor-gallery__title-item_active 
+					span Все события 
+				+e('a')(href='#').title-item 
+					span Конкурс
+				+e('a')(href='#').title-item 
+					span Выстовка
+			+b('').elementor-gallery__container
+				- for(var i = 0; i < 12; i++)
+					+e('a')(href='#').item
+						+e('div').container-img
+							+e('img')(src='../img/history.jpg' alt='history').item-img
+
