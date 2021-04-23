@@ -4,6 +4,7 @@ $rootFontSize = $rootFontVal px
 $base = #000
 $gray = #7a7a7a
 
+$max_xsm = '(max-width 575px)'
 $max_xs = '(max-width 767px)'
 $max_sm = '(max-width 1023px)'
 $max_md = '(max-width 1199px)'
@@ -212,19 +213,24 @@ colsWrap(cols, xOffset, yOffset)
 		padding (yOffset/2)px (xOffset/2)px
 		width (100/cols)%
 		
-colsWrapFlex(cols, xOffset, yOffset)
+colsWrapFlex(cols)
 	overflow hidden
 	&__cols-wrap
-		margin (-(yOffset/2))px (-(xOffset/2))px
 		font-size 0
 		display flex
 		flex-wrap wrap
 	&__col
 		font-size $rootFontSize
 		align-items flex-start
-		padding (yOffset/2)px (xOffset/2)px
 		width (100/cols)%
 		flex-basis (100/cols)%
+
+containerWrapFlex(cols, vgap, hgap)
+	&__container
+		display grid
+		font-size $rootFontSize
+		grid-gap: (vgap)px (hgap)px;
+		grid-template-columns: repeat((cols), 1fr);
 
 stick()
 	position absolute

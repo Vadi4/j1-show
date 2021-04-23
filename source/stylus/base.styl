@@ -2,6 +2,8 @@ html
 	height 100%
 	font-size $rootFontSize, false
 	user-select auto
+	scroll-behavior smooth
+	overflow-x: hidden;
 
 body
 	font-family 'Montserrat', sans-serif
@@ -40,6 +42,7 @@ img
 h1, h2, h3, h4, h5, .b-title-1, .b-title-2, .b-title-3, .b-title-4, .b-title-5
 	display block
 	line-height 1.2
+	letter-spacing -0.0415625em
 	font-weight 800
 	font-family 'Comfortaa'
 	margin-bottom 20px
@@ -64,6 +67,8 @@ h5, .b-title-5
 
 p
 	margin-bottom 20px
+	line-height 1.5
+    margin 0 0 1em 0
 	&:last-child
 		margin-bottom 0
 
@@ -111,6 +116,8 @@ button
 
 a
 	cursor pointer
+	text-decoration none
+	transition all 0.15s linear
 
 ._no-border, ._no-border *
 	border 0

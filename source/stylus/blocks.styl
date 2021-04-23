@@ -71,15 +71,19 @@
 		margin-bottom 70px
 		p
 			margin 0
-			
+		
 .b-cards-list
-	colsWrapFlex(1, 30, 60)
+	colsWrapFlex(1)
 	overflow visible
+	&__cols-wrap
+		margin -30px -15px
+	&__col
+		padding 30px 15px
 	@media $min_sm
-		colsWrapFlex(2, 30, 60)
+		colsWrapFlex(2)
 		overflow visible
 	@media $min_md
-		colsWrapFlex(3, 30, 80)
+		colsWrapFlex(3)
 		overflow visible
 	.b-card
 		height 100%
@@ -126,7 +130,232 @@
 		transition all 0.4s ease
 	&__contact
 		color #CACACA
-			
+
+.b-cards-text-list
+	padding-bottom 50px
+
+.b-card-text
+	padding 10px 10px
+	& img
+		border-radius 0
+
+.b-card-text__contact
+	font-family "Montserrat", Sans-serif, Montserrat
+	color #4D4D4D
+	&>b
+		font-weight 700
+
+.b-news-list
+	colsWrapFlex(1)
+	overflow visible
+	&__cols-wrap
+		margin-left -24px
+	&__col
+		padding-left 24px
+	@media $min_sm
+		colsWrapFlex(2)
+		overflow visible
+	@media $min_md
+		colsWrapFlex(3)
+		overflow visible
+	&__col
+		position relative
+	@media	$max_sm
+		margin-left -10px
+		margin-right -10px
+		&__cols-wrap
+			margin-left -12px
+		&__col
+			padding-left 12px
+	@media $max_xs
+		&__cols-wrap
+			margin-left 0
+		&__col
+			padding-left 0
+
+.b-news
+	margin-bottom 24px
+	background-color #fff
+	transition all 0.4s ease
+	&__post-body, &__post-footer
+		padding 24px
+	&__post-body>:not(:empty):not(:last-child)
+		margin-bottom 24px
+	&__title
+		color #cd2653
+	&__heading
+		font-size 26px
+		font-weight 400
+		font-family 'Montserrat', 'Sans-serif', 'Montserrat'
+	&__excerpt
+		font-size 16px
+	&__read-more > *
+		padding 3px 14px 3px 14px
+		border-style solid
+		border-width 1px 
+		border-radius 0
+		font-weight 400
+		color #cd2653
+		&:hover
+			color #A9A9A9
+	&__post-footer
+		order 1
+		border-top 1px solid #f7f7f7
+	&__date
+		font-size 12px
+	@media $min_sm
+		margin-bottom 12px
+	@media $max_xs
+		margin-bottom 0
+
+.b-cards-file-list
+	colsWrapFlex(1)
+	overflow visible
+	&__cols-wrap
+		margin 0 -15px
+	&__col
+		padding 30px 15px
+		position relative
+	@media $min_sm
+		colsWrapFlex(2)
+		overflow visible
+	@media	$max_xs
+		&__cols-wrap
+			margin 0 -10px
+	@media $min_md
+		colsWrapFlex(2)
+		overflow visible
+
+.b-card-file
+	display flex
+	align-items: center!important;
+	border-radius 10px
+	&:hover &__bottom-title 
+		a
+			color #cd2653
+	&:hover &__content-img
+		box-shadow 0 27px 60px -27px rgba(0,0,0,.17)
+	&:hover &__featured
+		box-shadow 0px 10px 30px -8px rgba(0,0,0,0.5)
+	&:hover &__featured 
+		img
+			transform scale(1.1)
+	&:hover .b-btn-arrow-show-hide
+		margin-left 20px
+		opacity 1
+	&:hover .b-btn-arrow-show
+			margin-left 10px
+			opacity 0	
+	&__content-img
+		order 0
+		transition all .3s ease-in-out
+	&__featured 
+		img
+			transition all .3s ease-in-out
+	&__featured
+		box-shadow 0px 5px 25px -8px rgba(0,0,0,0.5)
+		transition all .3s ease-in-out
+		background-color rgba(0,0,0,0.15)
+		border-radius 10px
+		position relative
+		overflow hidden
+		&:before
+			content ''
+			position absolute
+			border-radius 10px
+			left 0
+			top 0
+			width 100%
+			height 100%
+			background-color rgba(0,0,0,0.15)
+			transition all .3s ease-in-out
+			z-index 1
+	&__bottom
+		padding-left 15px
+		width 85%
+	&__bottom-title
+		position relative
+		width 100%
+	&__bottom-title 
+		a
+			font-family Montserrat, sans-serif, Montserrat
+			text-transform: uppercase;
+			font-size 23px
+			font-weight 600
+			letter-spacing 0.4px
+			color #000000
+			transition all .3s ease-in-out
+			word-break break-word
+	&__button
+		position relative
+		display block
+		& > a
+			display inline-block
+			position relative
+			padding 2px
+			font-family "Montserrat", Sans-serif, Montserrat
+			font-size 14px
+			line-height 1.8em
+			letter-spacing 0.9px
+			color #575757
+	&__btn-arrow
+		display inline-block
+		margin-left 10px
+	@media	$max_xsm
+		flex-wrap: wrap
+		&__bottom
+			margin-top 15px
+		&__featured img
+			width 100%
+		&__content-img
+			width 100%
+
+.b-btn-arrow-show
+	transition all .2s ease-in-out
+	transform translateX(0%) translateZ(0) translateY(-50%)
+	position absolute
+	top 55%
+	&:before
+		content '\f105'
+		font-family FontAwesome
+		display inline-block
+		padding-left 5px
+		padding-right 5px
+		font-style normal
+		font-weight 600
+		line-height 1
+		font-size 20px
+		color #575757
+	@media	$max_xsm
+			&:before
+				padding 0
+
+.b-btn-arrow-show-hide
+	transition all .2s ease-in-out
+	transform translateX(-20px) translateZ(0)
+	position absolute
+	opacity 0
+	top 14%
+	&:before
+		content '\f105'
+		font-family FontAwesome
+		display inline-block
+		padding-left 5px
+		padding-right 5px
+		font-style normal
+		font-weight 600
+		line-height 1
+		font-size 20px
+		color #575757
+	@media	$max_xsm
+			&:before
+				padding 0
+
+.b-item
+	padding 40px 25px
+	background-color #fff
+	transition all 0.4s ease
+
 .b-footer-contacts
 	&__row
 		margin-bottom 14px
@@ -134,11 +363,16 @@
 		align-items start
 		&:last-child
 			margin-bottom 0
+		&>a
+			color #fff
+			&:hover
+				opacity 0.7
 		.fa
 			flex-shrink 0
 			font-size 22px
+			&+.b-footer-contacts__text
+				padding-left 15px
 	&__text
-		padding-left 15px
 		display block
 		line-height 1.5
 		font-size 16px

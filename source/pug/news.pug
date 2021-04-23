@@ -1,0 +1,26 @@
+extends template.pug
+
+block title
+	title news
+	- var page_class = 'p-news top-right';
+	- var page_bg = '../img/ring-draw6.jpg';
+
+block content
+	.l-container
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2 Новости
+		+b('').news-list
+			+e('').cols-wrap
+				- for(var i = 0; i < 12; i++)
+					+e('').col
+						+b('article').news
+								+e('').post-body
+									+e('a')(href='#').title
+										+e('h2').heading Первая евразийская ювелирная выставка на пространстве ЕАЭС «J-1 Kazakhstan» пройдет в Нур-Султане
+									+e('').excerpt С 30 июня по 2 июля в Нур-Султане пройдет Международная ювелирная выставка-конгресс «J-1 Kazakhstan».
+									+e('').read-more
+										+e('a')(href='#').button 
+											span Читать
+								+e('').post-footer
+									+e('span').date 12.04.2021

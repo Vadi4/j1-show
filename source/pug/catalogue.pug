@@ -1,0 +1,31 @@
+extends template.pug
+
+block title
+	title catalogue
+	- var page_class = 'p-catalogue top-right';
+	- var page_bg = '../img/ring-draw6.jpg';
+
+block content
+	.l-container
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2 Каталог выстовки
+		+b('').cards-file-list
+			+e('').cols-wrap
+				- for(var i = 0; i < 11; i++)
+					+e('').col
+						+b('article').card-file
+							+e('').content-img
+								a(href='#')
+									+e('div').featured
+										+e('img')(src="../img/ps.jpg" alt='alrosa technology').img
+							+e('').bottom
+								+b('h3').card-file__bottom-title
+									a(href='#')
+										span Alrosa technology
+								+e('').button
+									a(href='#')
+										span Подробнее
+										+e('').btn-arrow
+											+b('i')(aria-hidden="true").btn-arrow-show 
+											+b('i')(aria-hidden="true").btn-arrow-show-hide

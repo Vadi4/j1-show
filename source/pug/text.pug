@@ -11,6 +11,18 @@ block content
 			include partials/breadcrumbs
 			+menu('main', 'Главная', 'Отзывы', 'Еще какой-то пункт меню')
 			p <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis suscipit quis optio quo perferendis quibusdam, hic quidem sed voluptate recusandae fuga harum sint ad nobis veniam minus, voluptas molestias vitae!</em>
+			+b('').nope-b-cards-list.b-cards-text-list
+				+e('').cols-wrap
+					- for(var i = 0; i < 6; i++)
+						+e('').col
+							+b('article').card.b-card-text
+								+e('').img-col-wrap
+									+e('img')(src="http://placehold.it/500x500" width="700" height="700").img
+								+e('').body
+									+b('span').title-2.b-card__title Закиров Константин
+									+e('span').caption Президент выставки
+									+e('').profile-content
+										+e('p').contact.b-card-text__contact <b> 10:30-11:30.</b> Что необходимо уметь и знать ювелирам “нового поколения” и где получить эти знания.  
 			img(src="http://placehold.it/200x100", alt="")._img-left
 			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam similique vitae perferendis natus quidem obcaecati quasi quas animi ex iusto impedit numquam dolores a blanditiis, quod fugiat debitis dolorum, atque! Reprehenderit, inventore incidunt neque magnam adipisci vitae, a possimus ab ex optio similique et impedit cupiditate corporis sequi ratione harum delectus error dolor officiis! Qui odit nihil cum. Officia esse ipsa ut rem, officiis. Veritatis non atque unde, corporis aut tenetur harum omnis. Ducimus quis excepturi nam debitis atque unde dolore rem in voluptate, nemo! Obcaecati facilis est corrupti perspiciatis nostrum, dolor, quas cupiditate, beatae necessitatibus consequatur dolores quidem perferendis!
 			img(src="http://placehold.it/200x100", alt="")._img-right
