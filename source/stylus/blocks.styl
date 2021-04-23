@@ -71,7 +71,8 @@
 		margin-bottom 70px
 		p
 			margin 0
-		
+
+//page contacts		
 .b-cards-list
 	colsWrapFlex(1)
 	overflow visible
@@ -145,6 +146,7 @@
 	&>b
 		font-weight 700
 
+//page news
 .b-news-list
 	colsWrapFlex(1)
 	overflow visible
@@ -208,6 +210,7 @@
 	@media $max_xs
 		margin-bottom 0
 
+//page catalogue
 .b-cards-file-list
 	colsWrapFlex(1)
 	overflow visible
@@ -351,8 +354,7 @@
 			&:before
 				padding 0
 
-////////////////////////////////////////////////////////////
-
+//page gallery
 .b-elementor-gallery
 	containerWrapFlex(1, 10, 10)
 	@media $min_xsm
@@ -431,7 +433,41 @@
 		&:hover
 			color black
 
-///////////////////////////////////////////////////////////
+//page video
+.b-video-list
+	colsWrapFlex(1)
+	background-color white
+	&__cols-wrap
+		max-width 1160px
+		margin auto
+	&__col
+		padding 10px
+	@media $min_sm
+		colsWrapFlex(3)
+	@media $min_md
+		colsWrapFlex(3)
+	&__top
+		margin-bottom 20px
+		width 100%
+		padding-bottom 56.25%
+		position relative
+		&
+			iframe
+				position absolute
+				top 0
+				left 0
+				height 100%
+				width 100%
+				border 0
+				background-color #000
+	&__bottom
+		h2
+			color #000
+			font-family "Montserrat", Sans-serif, Montserrat
+			font-size 16px
+			font-weight 500
+			text-align center
+			margin-bottom 0
 
 .b-item
 	padding 40px 25px

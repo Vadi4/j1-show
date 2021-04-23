@@ -1,0 +1,20 @@
+extends template.pug
+
+block title
+	title video
+	- var page_class = 'p-video top-right';
+	- var page_bg = '../img/ring-draw6.jpg';
+
+block content
+	.l-container-video
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2 Записи трансляций
+		+b('').video-list
+			+e('').cols-wrap
+				- for(var i = 0; i < 12; i++)
+					+e('').col
+						+e('').top
+							iframe(allowfullscreen title="youtube Видеоплеер" src="https://www.youtube.com/embed/K-mnxj6-glU?feature=oembed&start&end&wmode=opaque&loop=0&controls=1&mute=0&rel=0&modestbranding=0" data-origwidth data-origheight)
+						+e('').bottom
+							h2 Что такое ювелирные конкурсы и как к ним готовиться - Ильгиз Фазулзянов
