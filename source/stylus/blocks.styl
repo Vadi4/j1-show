@@ -472,6 +472,92 @@
 			text-align center
 			margin-bottom 0
 
+//order-expo-kz
+.b-order-expo
+	colsWrapFlex(1)
+	&__col
+		padding 10px
+	@media $min_sm
+		colsWrapFlex(2)
+	@media $min_md
+		colsWrapFlex(2)
+	&__img
+		margin-bottom 40px
+	&__list
+		margin 0 0 3rem 3rem
+	&__list-li
+		list-style-position initial
+		margin 0.5rem 0 0 2rem
+	&__title
+		font-weight 700
+	&__form
+		text-align center
+		font-family 'Montserrat' , Sans-serif, Montserrat
+		&__btn
+			display inline-block
+			white-space nowrap
+			user-select none
+			border 0
+			cursor pointer
+			text-transform uppercase
+			font-size 18px
+			font-weight 400
+			padding 10px 30px 10px 30px
+			color #ffffff
+			background-color #2F2F2F
+			transition all 0.4s ease
+			letter-spacing 0.0333em
+			line-height 1.25
+			&:hover
+				background-color #767676
+				text-decoration underline
+	&__input-wrap
+		&:not(:last-child)
+			padding-bottom: 27px
+		&__text
+			font-family 'Helvetica Neue',Helvetica,'Segoe UI',Arial,sans-serif
+		&__input,
+		&__textarea
+			outline none
+			&:not(.b-order-expo__form__btn):not(.b-order-expo__input-wrap__checkbox)
+				width: 100%
+				display block
+				box-shadow 0px 0px 10px 0px rgba(0,0,0,0.5)
+				font-size 18px
+				font-weight 300
+				padding 15px 15px 15px 30px
+				border-radius 0px
+				background-color #fff
+				border 1px solid #e7e7e7
+				color #000
+				transition border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out
+				&:hover
+					border 1px solid#333 
+		&__textarea
+			resize none
+			line-height 1.5
+			appearance none
+			height 176px
+		&__input
+			&:not(.b-order-expo__form__btn):not(.b-order-expo__input-wrap__checkbox)
+				height: 50px;
+		&__checkbox
+			appearance none
+			position relative
+			top 2px
+			display inline-block
+			margin 0
+			width 15px
+			min-width 15px
+			height 15px
+			background #fff
+			border 0
+			border-style solid
+			border-width 1px
+			border-color #dcd7ca
+			cursor pointer
+
+//product
 .b-alrosa-technology
 	&__img
 		margin auto
@@ -495,6 +581,8 @@
 		transition all .3s
 		&:hover 
 			color #747474
+
+/////////////////////////////
 
 .b-item
 	padding 40px 25px
