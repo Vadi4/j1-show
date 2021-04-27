@@ -1,0 +1,79 @@
+extends template.pug
+
+block title
+	title congress
+	- var page_class = 'p-congress top-right';
+	- var page_bg = '../img/ring-draw6.jpg';
+
+block content
+	.l-container
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2 О конгрессе
+		+b('').congress
+			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat vero reiciendis eius rem sint, consequuntur.
+			ul 
+				li Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, minima?
+				li Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, minima?
+				li Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, minima?
+			p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, mollitia.
+			p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, mollitia.
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2 Программа конгресса
+		+b('').congress
+			+e('').cols-wrap
+				+e('').col-1
+					+e('a')(href='#').btn.active
+						span Lorem
+					+e('a')(href='#').btn 
+						span Lorem
+					+e('a')(href='#').btn 
+						span Lorem
+					+e('a')(href='#').btn 
+						span Lorem
+				+e('').col-2
+					+e('').double-down
+						i.fa.fa-angle-double-down
+					+e('').timeline-track
+						+e('').timeline-track__title
+							+e('span').timeline-track__title__element.title-element-left Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+						+e('').timeline-track__icon.icon-left 
+							i.fa.fa-book.point-icon-inner
+						+e('').timeline-track__time
+							+e('span').timeline-track__time__element.time-element-left 10:30-11:00
+					+e('').timeline-track
+						+e('').timeline-track__time.time-right
+							+e('span').timeline-track__time__element.time-element-right 10:30-11:00
+						+e('').timeline-track__icon.icon-right 
+							i.fa.fa-book.point-icon-inner
+						+e('').timeline-track__title.title-right
+							+e('span').timeline-track__title__element.title-element-right Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+					+e('').timeline-track
+						+e('').timeline-track__title
+							+e('span').timeline-track__title__element.title-element-left Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+						+e('').timeline-track__icon.icon-left 
+							i.fa.fa-book.point-icon-inner
+						+e('').timeline-track__time
+							+e('span').timeline-track__time__element.time-element-left 10:30-11:00
+					+e('').timeline-track
+						+e('').timeline-track__time.time-right
+							+e('span').timeline-track__time__element.time-element-right 10:30-11:00
+						+e('').timeline-track__icon.icon-right 
+							i.fa.fa-book.point-icon-inner
+						+e('').timeline-track__title.title-right
+							+e('span').timeline-track__title__element.title-element-right Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+					+e('').timeline-track
+						+e('').timeline-track__title
+							+e('span').timeline-track__title__element.title-element-left Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+						+e('').timeline-track__icon.icon-left 
+							i.fa.fa-book.point-icon-inner
+						+e('').timeline-track__time
+							+e('span').timeline-track__time__element.time-element-left 10:30-11:00
+					+e('').timeline-track
+						+e('').timeline-track__time.time-right
+							+e('span').timeline-track__time__element.time-element-right 10:30-11:00
+						+e('').timeline-track__icon.icon-right 
+							i.fa.fa-book.point-icon-inner
+						+e('').timeline-track__title.title-right
+							+e('span').timeline-track__title__element.title-element-right Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet

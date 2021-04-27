@@ -229,8 +229,8 @@ containerWrapFlex(cols, vgap, hgap)
 	&__container
 		display grid
 		font-size $rootFontSize
-		grid-gap: (vgap)px (hgap)px;
-		grid-template-columns: repeat((cols), 1fr);
+		grid-gap (vgap)px (hgap)px
+		grid-template-columns repeat((cols), 1fr)
 
 stick()
 	position absolute
