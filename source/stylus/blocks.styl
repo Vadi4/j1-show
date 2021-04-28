@@ -487,96 +487,81 @@
 	&__img
 		margin-bottom 40px
 	&__text-wrap
-		margin 0 0 30px 30px
-	&__text
-		margin 5px 0 0 20px
-		list-style-position initial
-	&__subtitle
-		display block
-		font-weight 700
-		margin-bottom 20px
+		&>*:first-child
+			font-weight 700
+		ul
+			margin 0 0 30px 30px
+			list-style-position initial
+			&>*
+				margin 5px 0 0 20px
 
-		
-.b-order-expo
-	colsWrapFlex(1)
-	&__col
-		padding 10px
-	@media $min_sm
-		colsWrapFlex(2)
-	@media $min_md
-		colsWrapFlex(2)
-	&__img
-		margin-bottom 40px
-	&__list
-		margin 0 0 3rem 3rem
-	&__list-li
-		list-style-position initial
-		margin 0.5rem 0 0 2rem
-	&__title
-		font-weight 700
-	&__form
-		text-align center
-		font-family 'Montserrat' , Sans-serif, Montserrat
-		&__btn
-			display inline-block
-			white-space nowrap
-			user-select none
-			border 0
-			cursor pointer
-			text-transform uppercase
-			font-size 18px
-			font-weight 400
-			padding 10px 30px 10px 30px
-			color #ffffff
-			background-color #2F2F2F
-			transition all 0.4s ease
-			letter-spacing 0.0333em
-			line-height 1.25
-			&:hover
-				background-color #767676
-				text-decoration underline
-	&__input-wrap
-		&:not(:last-child)
-			padding-bottom: 27px
-		&__text
-			font-family 'Helvetica Neue',Helvetica,'Segoe UI',Arial,sans-serif
-		&__input,
+.b-form
+	&__input
+		height 56px
+		margin-bottom 27px
+		&:not(.b-checkbox)
+			padding 3.75px 7.5px
+	&__textarea
+		height 176px		
+		resize none
+		margin-bottom 27px
+		padding 18.75px 7.5px 3.75px
+		box-shadow 0px 0px 10px 0px rgba(0,0,0,0.5)
+	&__input,
 		&__textarea
-			outline none
-			&:not(.b-order-expo__form__btn):not(.b-order-expo__input-wrap__checkbox)
-				width: 100%
-				display block
+			&:not(.b-checkbox)
+				font-size 1rem
+				color #495057
+				padding-left 30px
 				box-shadow 0px 0px 10px 0px rgba(0,0,0,0.5)
-				font-size 18px
-				font-weight 300
-				padding 15px 15px 15px 30px
-				border-radius 0px
 				background-color #fff
 				border 1px solid #e7e7e7
-				color #000
-				transition border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out
+				border-radius 0
+				transition border-color .15s ease-in-out,box-shadow .15s ease-in-out
 				&:hover
-					border 1px solid#333 
-		&__textarea
-			resize none
-			line-height 1.5
-			appearance none
-			height 176px
-		&__input
-			&:not(.b-order-expo__form__btn):not(.b-order-expo__input-wrap__checkbox)
-				height: 50px;
-		&__checkbox
-			appearance none
-			position relative
-			top 2px
-			display inline-block
-			margin 0
-			width 15px
-			min-width 15px
-			height 15px
-			background #fff
-			border 1px solid #dcd7ca
-			cursor pointer
+					border 1px solid#333	
+	&__btn
+		user-select none
+		border 0
+		cursor pointer
+		border-radius 0
+		text-transform uppercase
+		font-size 18px
+		font-weight 400
+		padding 10px 30px 10px 30px
+		color #ffffff
+		background-color #2F2F2F
+		transition all 0.4s ease
+		letter-spacing 0.0333em
+		line-height 1.25
+		&:hover
+			background-color #767676
+			text-decoration underline
+
+.b-checkbox
+	height auto
+	font-weight 600
+	text-align center
+	&__form-input
+		appearance none
+		position relative
+		top 2px
+		display inline-block
+		margin 0
+		width 15px
+		min-width 15px
+		height 15px
+		background #fff
+		border 1px solid #dcd7ca
+		cursor pointer
+		&:checked
+			&:before 
+				content url(../img/jackdaw.svg)
+				position absolute
+				display inline-block
+				margin -1.875px 0 0 -2.5px
+				height 17.5px
+				width 17.5px
 
 //product
 .b-alrosa-technology
@@ -612,6 +597,49 @@
 		&__col-2
 			flex-basis 78%
 			max-width 100%
+			&:after
+				content ''
+				position absolute
+				top 0
+				left 50%
+				height 100%
+				border-left 1px solid black
+				z-index 1
+		.b-order-text
+			order 1
+			.b-timeline-track__text
+				padding-right 135px
+				padding-left 0
+		.b-order-icon
+			order 2
+			&:after
+				content ''
+				width 120px
+				position absolute
+				left 0
+				top 50%
+				border 1px solid #e5e5e5
+				margin-left -120px
+			&:before
+				border 0
+		.b-order-time
+			text-align left
+			order 3
+			.b-timeline-track__time
+				margin-left 10px
+				&:after
+					content ''
+					left 0
+					top 50%
+					position absolute
+					margin-top -7px
+					margin-left -14px
+					border 7px solid #E2E2E2;
+					border-bottom-color transparent
+					border-top-color transparent
+					border-left-color transparent
+				&:before
+					border 0
 	&__cols-wrap
 		display flex
 		flex-wrap wrap
@@ -621,6 +649,12 @@
 		padding 15px
 		background white
 		position relative
+	&__col-2
+		flex-basis 100%
+		max-width 100%
+		position relative
+		padding 15px
+		margin-top 120px
 	&__btn
 		text-align center
 		display block
@@ -650,125 +684,152 @@
 			&:before
 				width 3px
 				background #4A4242
+	&__sticky
+		top 0
+		position sticky
+		position -webkit-sticky
+		align-self flex-start
 	&__double-down
 		position absolute
 		left 50%
-		transform translate(-42%, -30%)
+		transform translate(-50%, -100%)
 		background-color white
 		z-index 2
-	&__col-2
-		flex-basis 100%
-		max-width 100%
+
+.b-timeline-track
+	display flex
+	margin-top 20px
+	text-align left
+	&__text-wrap
+		order 3
+		width 100%
+		padding 10px 0 30px 0
+	&__text
+		display block
+		padding-left 135px
+	&__icon-wrap
+		order 2
 		position relative
-		padding 15px
-		margin-top 120px
-		&:after
+		display grid
+		width 100px
+		height 50px
+		align-items center
+		background #fff
+		border-radius 50%
+		text-align center
+		color #313131
+		cursor pointer
+		transition all .55s
+		border 1px solid #e2e2e2
+		z-index 2
+		&:before
 			content ''
+			width 120px
 			position absolute
-			top 0
-			left 50%
-			height 100%
-			border 1px solid black
-			z-index 1
-	&__timeline-track
-		margin-top 30px
-		display flex
-		&__icon 
-			position relative
-			display grid
-			width 100px
-			height 50px
-			align-items center
-			background #fff
-			border-radius 50%
-			text-align center
-			color #313131
-			cursor pointer
-			transition all .55s
-			border 1px solid #e2e2e2
-			z-index 2
-		&__title
-			width 100%
-			&__element
-				padding 10px 0 30px 0
-				display block
+			right 0
+			top 50%
+			border 1px solid #e5e5e5
+			margin-right -120px
+	&__time-wrap
+		order 1
+		width 100%
+		margin-top 13.5px
+		text-align right
+	&__time
+		position relative
+		font-family "Montserrat", Sans-serif
+		font-size 16px
+		color #8F1616
+		background #E2E2E2
+		border-radius 0
+		padding 10px 15px
+		transform translateX(0) translateY(50%)
+		margin-right 10px
+		&:before
+			content ''
+			right 0
+			top 50%
+			position absolute
+			margin-top -7px
+			margin-right -14px
+			border 7px solid #E2E2E2;
+			border-bottom-color transparent
+			border-top-color transparent
+			border-right-color transparent
+
+@media $max_xs
+	.b-congress
+		&__col-2
+			&:after
+				content ''
+				position absolute
+				top 0
+				left 40px
+				height 100%
+				border-left 1px solid black
+				z-index 1
+		&__double-down
+			left 40px
+			transform translate(-50%, -100%)
+	.b-timeline-track
+		&__text-wrap
+			order 3
+		&__text
+			padding-left 15px
+		&__icon-wrap
+			order 1
+			width 70px
+			&:before
+				border 0
+		&__time-wrap
+			order 2
+			white-space nowrap
+			width 20% 
 		&__time
-			width 100%
-			margin-top 13.5px
-			&__element
-				position relative
-				font-family "Montserrat", Sans-serif
-				font-size 16px
-				color #8F1616
-				background #E2E2E2
-				border-radius 0
-				padding 10px 15px
-				transform: translateX(0) translateY(50%)
+			margin-left 10px
+			position relative
+			&:after
+				content ''
+				left 0
+				top 50%
+				position absolute
+				margin-top -7px
+				margin-left -14px
+				border 7px solid #E2E2E2;
+				border-bottom-color transparent
+				border-top-color transparent
+				border-left-color transparent
+				border-right-color inherit
+			&:before
+				border 0
+	.b-order-time
+		.b-timeline-track__time
+			&:after
+				border 7px solid #E2E2E2;
+				border-bottom-color transparent
+				border-top-color transparent
+				border-left-color transparent
 
-.b-title-element-left
-	padding-right: 135px
+@media $max_xsm
+	.b-timeline-track
+		&__text-wrap
+			margin-top 60px
+		&__text
+			padding-left 20px
+		&__icon-wrap
+			&:before
+				width 100px
+				right 21px
+				top 150%
+				border 1px solid #e5e5e5
+				margin-right -100px
 
-.b-title-element-right
-	padding-left: 135px
-
-.b-icon-left
-	&:after
-		content ''
-		width 120px
-		position absolute
-		left 0
-		top 50%
-		border 1px solid #e5e5e5
-		margin-left -120px
-
-.b-icon-right
-	&:before
-		content ''
-		width 120px
-		position absolute
-		right 0
-		top 50%
-		border 1px solid #e5e5e5
-		margin-right -120px
-
-.b-time-element-left
-	margin-left 10px
-	&:after
-		content ''
-		left 0
-		top 50%
-		position absolute
-		margin-top -7px
-		margin-left -14px
-		border 7px solid #E2E2E2;
-		border-bottom-color transparent!important
-		border-top-color transparent!important
-		border-left-color transparent!important
-
-.b-time-element-right
-	margin-right 10px
-	&:before
-		content ''
-		right 0
-		top 50%
-		position absolute
-		margin-top -7px
-		margin-right -14px
-		border 7px solid #E2E2E2;
-		border-bottom-color transparent!important
-		border-top-color transparent!important
-		border-right-color transparent!important
-
-.b-time-right, .b-title-right
-	text-align right 
-
-.b-active
+.b-btn-active
 	color white
 	background-color #4A4242
-    box-shadow 0px 2px 46px -15px rgba(0,0,0,0.69)
+	box-shadow 0px 2px 46px -15px rgba(0,0,0,0.69)
 
-//////////////////////
-
+//footer
 .b-item
 	padding 40px 25px
 	background-color #fff
