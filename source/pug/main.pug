@@ -5,3 +5,113 @@ block title
 	- var page_class = 'p-main';
 
 block content
+	.l-container
+		+b('').main__col-wrap
+			+e('').col
+				+e('a')(href='#').btn 
+					span Lorem, ipsum.
+			+e('').col
+				+b('img')(src='../img/new-logo.png' alt='logo' role='presentation').logo__img
+			+b('').btn-arow
+				i.btn-icon.button-after.fa.fa-chevron-down
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2.b-title-2-up Преимущества
+		+b('').block__col-wrap
+			+e('').col
+				+e('p').text Lorem ipsum dolor sit amet.
+				+e('p').text Lorem ipsum dolor sit amet.
+				+e('p').text Lorem ipsum dolor sit amet.
+			+e('').col
+				+b('span').title-2 Lorem, ipsum.
+				+b('span').title-3 12 28, ipsum.
+				+e('img')(src='http://placehold.it/500x500' alt='').img
+			+e('').col
+				+e('p').text Lorem ipsum dolor sit amet.
+				+e('p').text Lorem ipsum dolor sit amet.
+				+e('p').text Lorem ipsum dolor sit amet.
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2.b-title-2-up Экспонентам
+		+b('').main-card__col-wrap
+			+e('').col
+				+b('a')(href='#').btn.btn-active
+					span lorem
+				p Lorem ipsum dolor sit amet.
+			+e('').col
+				+b('form').form
+					+b('input')(type='text' size='40' placeholder='Ф.И.О' aria-required='true' aria-invalid='false').input.b-form__input
+					+b('input')(type='text' size='40' placeholder='Название компании' aria-required='true' aria-invalid='false').input.b-form__input
+					+b('input')(type='tell' size='40' placeholder='Телефон' aria-required='true' aria-invalid='false').input.b-form__input
+					+b('input')(type='email' size='40' placeholder='Email' aria-required='true' aria-invalid='false').input.b-form__input
+					+b('textarea')(name='textarea' placeholder='Сообщение'  cols='40' rows='10' aria-invalid='false' ).textarea.b-form__textarea
+					+b('').checkbox.b-form__input
+						+e('input')(type='checkbox' id='checkbox' value='1').form-input
+						+e('label')(for='checkbox').form-label Я соглашаюсь с <a href="#"><span>политекой</span></a> обработки персональных данных
+					+b('input')(type='submit' value="Отправить").btn.b-form__btn
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2.b-title-2-up Посетителям	
+		+b('').main-card__col-wrap
+			+e('').col
+				+b('form').form
+					+b('input')(type='text' size='40' placeholder='Ф.И.О' aria-required='true' aria-invalid='false').input.b-form__input
+					+b('input')(type='tell' size='40' placeholder='Телефон' aria-required='true' aria-invalid='false').input.b-form__input
+					+b('input')(type='email' size='40' placeholder='Email' aria-required='true' aria-invalid='false').input.b-form__input
+					+b('textarea')(name='textarea' placeholder='Сообщение'  cols='40' rows='10' aria-invalid='false' ).textarea.b-form__textarea
+					+b('').checkbox.b-form__input
+						+e('input')(type='checkbox' id='checkbox' value='1').form-input
+						+e('label')(for='checkbox').form-label Я соглашаюсь с <a href="#"><span>политекой</span></a> обработки персональных данных
+					+b('input')(type='submit' value="Отправить").btn.b-form__btn
+			+e('').col
+				+b('a')(href='#').btn.btn-active
+					span lorem
+				p Lorem ipsum dolor sit amet.
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2.b-title-2-up Возможности
+		+b('').block__col-wrap
+			+e('').col
+				+e('p').text Lorem ipsum dolor sit amet.
+				+e('p').text Lorem ipsum dolor sit amet.
+				+e('p').text Lorem ipsum dolor sit amet.
+			+e('').col
+				+b('span').title-2 Lorem, ipsum.
+				+b('span').title-3 12 28, ipsum.
+				+e('img')(src='http://placehold.it/500x500' alt='').img
+			+e('').col
+				+e('p').text Lorem ipsum dolor sit amet.
+				+e('p').text Lorem ipsum dolor sit amet.
+				+e('p').text Lorem ipsum dolor sit amet.
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2.b-title-2-up Конкурс	
+		+b('').main-card__col-wrap
+			+e('').col
+				+b('a')(href='#').btn.btn-active
+					span lorem
+				p Lorem ipsum dolor sit amet.
+			+e('').col
+				+b('form').form
+					+b('input')(type='text' size='40' placeholder='Ф.И.О' aria-required='true' aria-invalid='false').input.b-form__input
+					+b('input')(type='text' size='40' placeholder='Название компании' aria-required='true' aria-invalid='false').input.b-form__input
+					+b('input')(type='tell' size='40' placeholder='Телефон' aria-required='true' aria-invalid='false').input.b-form__input
+					+b('input')(type='email' size='40' placeholder='Email' aria-required='true' aria-invalid='false').input.b-form__input
+					+b('textarea')(name='textarea' placeholder='Сообщение'  cols='40' rows='10' aria-invalid='false' ).textarea.b-form__textarea
+					+b('').checkbox.b-form__input
+						+e('input')(type='checkbox' id='checkbox' value='1').form-input
+						+e('label')(for='checkbox').form-label Я соглашаюсь с <a href="#"><span>политекой</span></a> обработки персональных данных
+					+b('input')(type='submit' value="Отправить").btn.b-form__btn
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2.b-title-2-up Конгресс	
+		+b('').main-card__col-wrap
+			+e('').col
+				+e('img')(src='http://placehold.it/500x500' alt='').img
+				+e('a')(href='#').btn
+					span lorem
+			+e('').col
+				+b('a')(href='#').btn.btn-active
+					span lorem
+				p Lorem ipsum dolor sit amet.		
+	
