@@ -13,7 +13,7 @@ block content
 				+b('a')(href='#').btn_dark-transparent.b-main-screen__btn 
 					span Lorem, <br />ipsum.
 			+e('').col
-				+b('img')(src='../img/new-logo.png' alt='logo' role='presentation').logo.b-main-screen__logo
+				+b('img')(src='../img/new-logo-white.png' alt='logo' role='presentation').logo.b-main-screen__logo
 		+b('').btn-arow.b-main-screen__btn-arrow
 			i.btn-icon.button-after.fa.fa-chevron-down
 	.l-container
@@ -22,7 +22,7 @@ block content
 				+b('span').title-2.b-hero__title-2.b-title-2-up Преимущества
 		+b('').show
 			+e('').top-wrap
-				+b('span').title-2.b-show__title Гостиничный<br /> двор
+				+b('span').title-2.b-show__title Гостиный<br /> Двор
 				+b('span').title-3.b-show__subtitle  26 - 28 сентября 
 			+e('').row
 				+e('').col_left
@@ -32,7 +32,9 @@ block content
 						p Lorem ipsum dolor sit amet.
 				+e('').col_center
 					+b('').logo-wrap
-						+e('img')(src='http://placehold.it/500x500' alt='').img
+						+e('img')(src='../img/fon.jpg' alt='').img-fon
+						+e('img')(src='../img/frame-gray.png' alt='').img-frame
+						+e('img')(src='../img/j1.png' alt='').img-logo
 				+e('').col_right
 					+e('').text
 						p Lorem ipsum dolor sit amet.
@@ -89,16 +91,18 @@ block content
 			+b('').show
 				+e('').row
 					+e('').col_left
-						+b('span').title-3.b-show__title  Экспонентам
+						+b('span').title-3.b-show__title_dark  Экспонентам
 						+e('').text
 							p Lorem ipsum dolor sit amet.
 							p Lorem ipsum dolor sit amet.
 							p Lorem ipsum dolor sit amet.
 					+e('').col_center
 						+b('').logo-wrap
-							+e('img')(src='http://placehold.it/500x500' alt='').img
+								+e('img')(src='../img/fon.jpg' alt='').img-fon_dark
+								+e('img')(src='../img/frame-white.png' alt='').img-frame_dark
+								+e('img')(src='../img/new-logo-white.png' alt='').img-logo_dark
 					+e('').col_right
-						+b('span').title-3.b-show__title Посетителям
+						+b('span').title-3.b-show__title_dark Посетителям
 						+e('').text
 							p Lorem ipsum dolor sit amet.
 							p Lorem ipsum dolor sit amet.
@@ -138,13 +142,12 @@ block content
 					+e('').col-row
 						+e('img')(src='../img/main.jpg' alt='').img
 						+b('a')(href='#').btn.b-main-card__btn
-							span lorem
+							span Подробнее	
 				+e('').col_smol
 					+b('a')(href='#').btn-shadow_active.b-main-card__btn-shadow
 						span lorem
 					+e('').text
 						p Lorem ipsum dolor sit amet.
 					+b('a')(href='#').btn-shadow.b-main-card__btn-shadow
-						span lorem	
-
+						span lorem
 	

@@ -81,6 +81,9 @@
 		color white
 
 .b-main-screen
+	@media $min_xsm
+		&__col
+			flex-basis 50%
 	height 100vh 
 	width 100% 
 	position relative
@@ -88,12 +91,14 @@
 	flex-wrap wrap
 	&__content
 		display flex
+		flex-wrap wrap
 		position relative
 		max-width 1160px
+		padding-top 180px
 		margin auto
 		z-index 2
 	&__col
-		flex-basis: 50%
+		flex-basis: 100%
 		max-width 100%
 		padding 10px
 		align-self center
@@ -120,15 +125,29 @@
 		color #FFFFFF
 
 .b-main-card
+	@media $min_xsm
+		&__col
+			flex-basis 50%
 	display flex
+	flex-wrap wrap
 	&__col
-		flex-basis 50%
+		flex-basis 100%
 		max-width 100%
 		padding 15px
 	&__col-row
 		text-align center
 	&__btn-shadow
 		padding 15px 20px
+	&__btn
+		padding 12px 24px
+		border 2px solid black
+		border-radius 0
+		color black
+		font-family 'Comfortaa'
+		font-size 18px
+		font-weight: 400
+	&__img
+		padding-bottom 20px
 	&__text
 		padding 25px 15px
 		&>*
@@ -142,21 +161,27 @@
 				flex-basis 39.52%
 
 .b-show-dark
-	padding 8rem 0
+	padding 8rem 0 13rem
+	background rgba(0,0,0,0.08)
+	margin-top 85px
 	.b-hero
 		margin 0 0 60px 0
 	.b-show
 		max-width 1160px
 		margin auto
 
-.b-hero_buttom
-	margin 0 0 60px 0
+// .b-hero_buttom
+// 	margin 0 0 60px 0
 
 .b-show 
+	@media $min_xsm
+		&__col
+			flex-basis 33.3%
 	&__row
 		display flex
+		flex-wrap wrap
 	&__col
-		flex-basis 33.3%
+		flex-basis 100%
 		max-width 100%
 		padding 10px
 		&_left
@@ -167,6 +192,44 @@
 			text-align left
 	&__top-wrap
 		text-align center
+	&__title
+		font-size 45px
+		color #313131
+		font-weight 100
+		&_dark
+			font-size 22px
+			text-transform uppercase
+			font-weight 400
+			line-height 31px
+	&__subtitle
+		font-size: 30px
+		font-weight: 200
+		color #717171
+	&__text>*
+		font-size 17px
+		font-weight 400
+
+.b-logo-wrap
+	position relative
+	&__img-fon
+		position absolute
+		max-width 250px
+		z-index 1
+		opacity 0.28
+		left 20px
+		top 25px
+		&_dark
+			opacity 1
+	&__img-frame
+		position absolute
+		max-width 250px
+		left 50px
+		top -15px
+		z-index 2
+	&__img-logo
+		position relative
+		max-width 332px
+		z-index 3
 
 ////////////////////////////////main
 .b-text
