@@ -18,6 +18,12 @@ module.exports = function(){
 		.pipe($.gulp.dest('build/img'));
 
 	$.gulp.src([
+		'source/video/*.mp4',
+		'source/video/**/*.mp4',
+	])
+		.pipe($.gulp.dest('build/video'));
+
+	$.gulp.src([
 		'source/fonts/*.woff',
 		'source/fonts/*.woff2'
 	])

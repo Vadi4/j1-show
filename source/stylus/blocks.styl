@@ -70,8 +70,103 @@
 		line-height 1.5
 		font-size 16px
 /////////////////////main
+.p-main
+	.l-header
+		position absolute
+		z-index 2
+		width 100%
+		&__logo
+			display none
+	.b-header-nav__link
+		color white
 
+.b-main-screen
+	height 100vh 
+	width 100% 
+	position relative
+	display flex
+	flex-wrap wrap
+	&__content
+		display flex
+		position relative
+		max-width 1160px
+		margin auto
+		z-index 2
+	&__col
+		flex-basis: 50%
+		max-width 100%
+		padding 10px
+		align-self center
+	&__btn-arrow
+		flex-basis 100%
+		text-align center
+		position relative
+		color white
+		z-index 2
+	&__video-container
+		position absolute
+		width 100%
+		height 100vh
+		top 0
+		left 0
+		z-index 1
+	&__video
+		width 100%
+		height 100%
+		object-fit cover
+	&__btn
+		font-size 20px
+		font-weight 200
+		color #FFFFFF
 
+.b-main-card
+	display flex
+	&__col
+		flex-basis 50%
+		max-width 100%
+		padding 15px
+	&__col-row
+		text-align center
+	&__btn-shadow
+		padding 15px 20px
+	&__text
+		padding 25px 15px
+		&>*
+			font-size 16px
+			font-weight 400
+			line-height 26px
+	@media $min_md
+		&__col
+			flex-basis 60.47%
+			&_smol
+				flex-basis 39.52%
+
+.b-show-dark
+	padding 8rem 0
+	.b-hero
+		margin 0 0 60px 0
+	.b-show
+		max-width 1160px
+		margin auto
+
+.b-hero_buttom
+	margin 0 0 60px 0
+
+.b-show 
+	&__row
+		display flex
+	&__col
+		flex-basis 33.3%
+		max-width 100%
+		padding 10px
+		&_left
+			text-align right 			
+		&_center
+			text-align center 			
+		&_right	
+			text-align left
+	&__top-wrap
+		text-align center
 
 ////////////////////////////////main
 .b-text
@@ -659,7 +754,7 @@
 		position relative
 		padding 15px
 		margin-top 120px
-	.b-btn-shw
+	.b-btn-shadow
 		margin-bottom 20px
 		padding 15px 20px
 		&:before
@@ -720,6 +815,9 @@
 			top 50%
 			border 1px solid #e5e5e5
 			margin-right -120px
+		&:hover
+			color #313131
+			background #e2e2e2
 	&__time-wrap
 		order 1
 		width 100%
@@ -813,11 +911,6 @@
 				top 150%
 				border 1px solid #e5e5e5
 				margin-right -100px
-
-.b-btn-active
-	color white
-	background-color #4A4242
-	box-shadow 0px 2px 46px -15px rgba(0,0,0,0.69)
 
 //footer
 .b-item
