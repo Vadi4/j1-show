@@ -522,7 +522,7 @@
 				padding 0
 
 //page gallery
-.b-elementor-gallery
+.b-gallery
 	containerWrapFlex(1, 10, 10)
 	@media $min_xsm
 		containerWrapFlex(2, 10, 10)
@@ -531,8 +531,8 @@
 	@media $min_md
 		containerWrapFlex(3, 10, 10)
 
-.b-elementor-gallery
-	&__container-img
+.b-gallery
+	&__item
 		position relative
 		&:before
 			content ''
@@ -542,14 +542,15 @@
 			transition all .800s ease-in-out
 		&:hover:before
 			background rgba(0,0,0,0.5)
-	&__titles-container
-		display flex
-		flex-wrap wrap
-		justify-content center
-		margin-bottom 40px
-		&>:not(:last-child)			
-			margin-right 20px
-	&__title-item
+
+.b-btn-box
+	display flex
+	flex-wrap wrap
+	justify-content center
+	margin-bottom 40px
+	&>:not(:last-child)			
+		margin-right 20px
+	&__btn
 		cursor pointer
 		color #6d7882
 		position relative
@@ -595,10 +596,11 @@
 				opacity 1
 				width 100%
 				height 100%
-	&__title-item_active
-		color black
-		&:hover
+	&__btn
+		&_active
 			color black
+			&:hover
+				color black
 
 //page video
 .b-video-list

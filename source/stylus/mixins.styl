@@ -226,11 +226,10 @@ colsWrapFlex(cols)
 		flex-basis (100/cols)%
 
 containerWrapFlex(cols, vgap, hgap)
-	&__container
-		display grid
-		font-size $rootFontSize
-		grid-gap (vgap)px (hgap)px
-		grid-template-columns repeat((cols), 1fr)
+	display grid
+	font-size $rootFontSize
+	grid-gap (vgap)px (hgap)px
+	grid-template-columns repeat((cols), 1fr)
 
 stick()
 	position absolute
