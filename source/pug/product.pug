@@ -1,0 +1,29 @@
+extends template.pug
+
+block title
+	title alrosa-technology
+	- var page_class = 'alrosa-technology top-right';
+	- var page_bg = '../img/ring-draw6.jpg';
+
+block content
+	.l-container
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2.title-2-up alrosa technology
+		+b('').catalog
+			+b('article').catalog-item
+				+e('').text-wrap
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, laboriosam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, laboriosam.
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, laboriosam.
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, laboriosam.
+				+e('').img-wrap
+					+e('img')(src='../img/pr.jpg' width="300" height="251" alt='pr').img
+				+b('').contacts.catalog-item__contacts
+					p Контакты
+					p г.Москва, Набережная Озерковская, д.24, пом. IА, ком.11, оф.406
+					p E-mail: info@alrosa-inspector.com 
+					p Тел.: 8 (495) 108 52 58
+					p Веб-сайт компании:  <a href='https://www.alrosa-inspector.com/'><span>https://www.alrosa-inspector.com/</span></a>
+					p Номер стенда: А142
+			+e('').buttom-btn
+				+b('a')(href='#').btn.catalog__btn В каталог

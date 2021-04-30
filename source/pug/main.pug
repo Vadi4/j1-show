@@ -47,13 +47,16 @@ block content
 			+e('').title-wrap
 				+b('span').title-2.b-hero__title-2.b-title-2-up Экспонентам
 		+b('').main-card
-			+e('').col_smol
-				+b('a')(href='#').btn-shadow.b-main-card__btn-shadow_active
-					span Lorem
+			+e('').col_sm
+				+b('a')(href='#').btn-shadow_active.b-main-card__btn-shadow Lorem
 				+e('').text
 					p Lorem ipsum dolor sit amet.
-				+b('a')(href='#').btn-shadow.b-main-card__btn-shadow
-					span Lorem
+				+b('a')(href='#').btn-shadow.b-main-card__btn-shadow Lorem
+			+e('').col_noactive
+				+e('').col-row
+					+e('img')(src='../img/main.jpg' alt='').img
+					+b('a')(href='#').btn.b-main-card__btn
+						span Подробнее	
 			+e('').col
 				+b('form').form
 					+b('input')(type='text' size='40' placeholder='Ф.И.О' aria-required='true' aria-invalid='false').input.b-form__input
@@ -79,13 +82,16 @@ block content
 						+e('input')(type='checkbox' id='checkbox' value='1').form-input
 						+e('label')(for='checkbox').form-label Я соглашаюсь с <a href="#"><span>политекой</span></a> обработки персональных данных
 					+b('input')(type='submit' value="Отправить").btn.b-form__btn
-			+e('').col_smol
-				+b('a')(href='#').btn-shadow.b-main-card__btn-shadow_active
-					span lorem
+			+e('').col_noactive
+				+e('').col-row
+					+e('img')(src='../img/main.jpg' alt='').img
+					+b('a')(href='#').btn.b-main-card__btn
+						span Подробнее	
+			+e('').col_sm
+				+b('a')(href='#').btn-shadow_active.b-main-card__btn-shadow lorem
 				+e('').text
 					p Lorem ipsum dolor sit amet.
-				+b('a')(href='#').btn-shadow.b-main-card__btn-shadow
-					span lorem
+				+b('a')(href='#').btn-shadow.b-main-card__btn-shadow lorem
 	block content					 
 		+b('').show-dark
 			+b('section').hero
@@ -115,13 +121,16 @@ block content
 				+e('').title-wrap
 					+b('span').title-2.b-hero__title-2.b-title-2-up Конкурс	
 			+b('').main-card
-				+e('').col_smol
-					+b('a')(href='#').btn-shadow.b-main-card__btn-shadow_active
-						span lorem
+				+e('').col_sm
+					+b('a')(href='#').btn-shadow_active.b-main-card__btn-shadow lorem
 					+e('').text
 						p Lorem ipsum dolor sit amet.
-					+b('a')(href='#').btn-shadow.b-main-card__btn-shadow
-						span lorem
+					+b('a')(href='#').btn-shadow.b-main-card__btn-shadow lorem
+				+e('').col_noactive
+					+e('').col-row
+						+e('img')(src='../img/main.jpg' alt='').img
+						+b('a')(href='#').btn.b-main-card__btn
+							span Подробнее					
 				+e('').col
 					+b('form').form
 						+b('select').select.b-form__input
@@ -140,17 +149,20 @@ block content
 			+b('section').hero
 				+e('').title-wrap
 					+b('span').title-2.b-hero__title-2.b-title-2-up Конгресс	
-			+b('').main-card
+			+b('').main-card_animal
 				+e('').col
 					+e('').col-row
 						+e('img')(src='../img/main.jpg' alt='').img
 						+b('a')(href='#').btn.b-main-card__btn
-							span Подробнее	
-				+e('').col_smol
-					+b('a')(href='#').btn-shadow.b-main-card__btn-shadow_active
-						span lorem
+							span Подробнее
+				+e('').col_noactive
+					+e('').col-row
+						+e('img')(src='../img/main.jpg' alt='').img
+						+b('a')(href='#').btn.b-main-card__btn
+							span Подробнее		
+				+e('').col_sm
+					+b('a')(href='#').btn-shadow_active.b-main-card__btn-shadow lorem
 					+e('').text
 						p Lorem ipsum dolor sit amet.
-					+b('a')(href='#').btn-shadow.b-main-card__btn-shadow
-						span lorem
+					+b('a')(href='#').btn-shadow.b-main-card__btn-shadow lorem
 	

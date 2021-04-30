@@ -93,10 +93,12 @@
 		&__logo
 			padding 0
 			float right
+		&__btn
+			padding-left 125px 
 	@media	$max_xs
 		&__col
 			text-align center
-	height 100vh 
+	min-height 100vh 
 	width 100% 
 	position relative
 	display flex
@@ -116,7 +118,7 @@
 		flex-wrap wrap
 		position relative
 		max-width 1160px
-		padding-top 180px
+		padding 180px 0 50px
 		margin auto
 		flex-basis 100%
 		z-index 2
@@ -132,6 +134,7 @@
 		flex-basis 100%
 		text-align center
 		position relative
+		padding 5px
 		color white
 		z-index 2
 		&>*
@@ -143,7 +146,7 @@
 	&__video-container
 		position absolute
 		width 100%
-		height 100vh
+		height 100%
 		top 0
 		left 0
 		z-index 1
@@ -187,36 +190,22 @@
 			flex-basis 50%
 	display flex
 	flex-wrap wrap
+	&_animal
+		animation-duration 2s
+		animation-fill-mode both
+		animation-name fadeInUp 		
 	&__col
 		flex-basis 100%
 		max-width 100%
 		padding 15px
+		&_noactive
+			display none
 	&__col-row
 		text-align center
 	&__btn-shadow
 		padding 15px 20px
 		position relative
 		text-align: left
-		&:after
-			content ''
-			position absolute
-			width 17px
-			height 17px
-			border-bottom 1px solid #212121
-			border-left 1px solid #212121		
-			transform rotate(-45deg)
-			top 12px
-			right 30px
-		&_active
-			color white
-			background-color #4A4242
-			box-shadow 0px 2px 46px -15px rgba(0,0,0,0.69)
-			&:after
-				border-top 2px solid white
-				border-right 2px solid white
-				border-bottom 0
-				border-left 0
-				top 22px
 	&__btn
 		padding 12px 24px
 		border 2px solid black
@@ -239,7 +228,7 @@
 	@media $min_md
 		&__col
 			flex-basis 60.47%
-			&_smol
+			&_sm
 				flex-basis 39.52%
 
 .b-show-dark
@@ -251,9 +240,6 @@
 	.b-show
 		max-width 1160px
 		margin auto
-
-// .b-hero_buttom
-// 	margin 0 0 60px 0
 
 .b-show 
 	@media $min_sm
@@ -354,6 +340,8 @@
 	@media $min_md
 		colsWrapFlex(3)
 		overflow visible
+	&_text-list
+		padding-bottom 50px
 	.b-card
 		height 100%
 	&__col
@@ -381,6 +369,8 @@
 		height auto
 		border-radius 50%
 		transition all 0.4s ease
+		&_img-text
+			border-radius 0
 	&__body
 		margin-top 60px
 		text-align center
@@ -399,20 +389,14 @@
 		transition all 0.4s ease
 	&__contact
 		color #CACACA
+		&_contact-text
+			font-family "Montserrat", Sans-serif, Montserrat
+			color #4D4D4D
+			&>b
+				font-weight 700
+	&_card-text
+		padding 10px 10px
 
-.b-cards-text-list
-	padding-bottom 50px
-
-.b-card-text
-	padding 10px 10px
-	.b-card__img
-		border-radius 0
-
-.b-card-text__contact
-	font-family "Montserrat", Sans-serif, Montserrat
-	color #4D4D4D
-	&>b
-		font-weight 700
 
 //page news
 .b-news-list
@@ -447,14 +431,14 @@
 	margin-bottom 24px
 	background-color #fff
 	transition all 0.4s ease
-	&__post-body, &__post-footer
+	&__post-body, 
+	&__post-footer
 		padding 24px
 	&__post-body>:not(:empty):not(:last-child)
 		margin-bottom 24px
 	&__title
 		color #cd2653
 		display block
-	&__heading
 		font-size 26px
 		font-weight 400
 		font-family 'Montserrat', 'Sans-serif', 'Montserrat'
@@ -575,11 +559,15 @@
 	@media	$max_xsm
 		flex-wrap: wrap
 		&__bottom
+			flex 0 0 100%
+			max-width 100%
 			margin-top 15px
+			padding-right 15px
 		&__img
 			width 100%
 		&__content-img
-			width 100%
+			flex 0 0 100%
+			max-width 100%
 
 .b-btn-arrow-show
 	transition all .2s ease-in-out
@@ -598,8 +586,8 @@
 		font-size 20px
 		color #575757
 	@media	$max_xsm
-			&:before
-				padding 0
+		&:before
+			padding 0
 
 .b-btn-arrow-show-hide
 	transition all .2s ease-in-out
@@ -619,8 +607,8 @@
 		font-size 20px
 		color #575757
 	@media	$max_xsm
-			&:before
-				padding 0
+		&:before
+			padding 0
 
 //page gallery
 .b-gallery
@@ -704,18 +692,24 @@
 				color black
 
 //page video
+.p-video
+	.l-container
+		padding 0
+
 .b-video-list
 	colsWrapFlex(1)
+	@media $min_sm
+		colsWrapFlex(3)
+	@media $min_md
+		colsWrapFlex(3)
 	background-color white
 	&__cols-wrap
 		max-width 1160px
 		margin auto
 	&__col
 		padding 10px
-	@media $min_sm
-		colsWrapFlex(3)
-	@media $min_md
-		colsWrapFlex(3)
+
+.b-video-file
 	&__top
 		margin-bottom 20px
 		width 100%
@@ -739,7 +733,14 @@
 			margin-bottom 0
 
 //order-expo-kz
+.p-order-expo-kz
+	.l-common-wrap
+		padding-bottom 0
+	.l-container
+		padding 0
+
 .b-order-expo
+	padding 50px 0
 	colsWrapFlex(1)
 	&__col
 		padding 10px
@@ -747,6 +748,8 @@
 		colsWrapFlex(2)
 	@media $min_md
 		colsWrapFlex(2)
+	@media $min_sm
+		padding 80px 0
 
 .b-order
 	&__img
@@ -829,17 +832,19 @@
 				width 17.5px
 
 //product
-.b-alrosa-technology
-	&__img
-		margin auto
-		margin-bottom 20px
-	&__text
-		display block
-	&__btn
+.b-catalog
+	@media $min_sm
+		&__img-wrap
+			flex-basis 35%
+			max-width 100%
+	&__wrap
+		display flex
+		flex-wrap wrap
+	&__buttom-btn
 		text-align center
-		display block
 		padding-top 20px
-	&__btn-text
+	&__btn
+		padding-top 20px
 		font-family 'Comfortaa'
 		font-size 18px
 		font-weight 400
@@ -852,6 +857,32 @@
 		transition all .3s
 		&:hover 
 			color #747474
+	&__img-wrap
+		display flex
+		justify-content center
+		height max-content
+		flex-basis 100%
+		max-width 100%
+		padding 10px
+
+.b-catalog-item
+	@media $min_sm
+		flex-basis 65%
+		max-width 100%
+	flex-basis 100%
+	max-width 100%
+	&__img
+		margin auto
+		margin-bottom 20px
+	&__text-wrap
+		padding-bottom 20px
+		&>*
+			margin-bottom 0
+	&__contacts
+		&>*
+			margin-bottom 0
+		&>*:first-child 
+			font-weight 700
 
 //congress
 .b-congress
