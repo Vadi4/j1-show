@@ -83,11 +83,38 @@ ready(() => {
 	document.addEventListener('click', e => {
 		let $target = e.target.closest('.js-dropdown-link');
 
-		if( $target ) {
+		if( $target && window.matchMedia("(max-width: 1023px)").matches ) {
 			slideToggle( $target.nextElementSibling );
 		}
+	});
 
+	new WOW().init();
 
+	document.addEventListener('click', e => {
+		let $target = e.target.closest('.js-tab-btn');
+
+		if( $target ) {
+			if( !$target.classList.contains('b-btn-shadow_active') ) {
+
+				e.preventDefault();
+				let dataId = $target.getAttribute('data-id');
+
+				let $actBtn = $target.closest('.b-main-card__col').querySelector('.b-btn-shadow_active');
+				$actBtn.classList.remove('b-btn-shadow_active');
+				slideUp( $actBtn.nextElementSibling);
+
+				$target.classList.add('b-btn-shadow_active');
+				slideDown( $target.nextElementSibling );
+
+				let $outContent = $target.closest('.b-main-card').querySelector('.b-main-card__content.js-act');
+				slideUp( $outContent );
+				$outContent.classList.remove('js-act');
+				let $actContent = document.querySelector('.b-main-card__content[data-id='+dataId+']');
+				slideDown( $actContent );
+				$actContent.classList.add('js-act');
+
+			}
+		} 
 	});
 
 });

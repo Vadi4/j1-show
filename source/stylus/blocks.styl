@@ -78,10 +78,16 @@
 		width 100%
 		&__logo
 			display none
+	.b-burger
+		color #fff
 	.b-header-nav
 		justify-content space-between
+		@media $max_sm
+			background-color #fff
+			color #000
 		&__link
-			color white
+			@media $min_md
+				color white
 	.l-common-wrap
 		padding-bottom 20px
 
@@ -194,19 +200,28 @@
 	&_animal
 		animation-duration 2s
 		animation-fill-mode both
-		animation-name fadeInUp 		
+		animation-name fadeInUp
 	&__col
 		flex-basis 100%
 		max-width 100%
 		padding 15px
-		&_noactive
-			display none
+	&__content
+		display none
+		&.js-act
+			display block
 	&__col-row
 		text-align center
 	&__btn-shadow
 		padding 15px 20px
 		position relative
 		text-align: left
+		margin-bottom 20px
+		&.b-btn-shadow
+			&_active
+				+
+					.b-main-card
+						&__text
+							display block
 	&__btn
 		padding 12px 24px
 		border 2px solid black
@@ -218,6 +233,8 @@
 		&:hover
 			color #747474
 			border 2px solid #747474
+	&__text
+		display none
 	&__img
 		padding-bottom 20px
 	&__text
@@ -249,18 +266,10 @@
 			align-items inherit
 			&_left
 				text-align right
-				&>*
-					animation-duration 2s
-					animation-fill-mode both
-					animation-name fadeInLeft 
 			&_center
 				text-align center 						
 			&_right	
 				text-align left
-				&>*
-					animation-duration 2s
-					animation-fill-mode both
-					animation-name fadeInRight 
 		&__row
 			flex-wrap nowrap
 	&__row
@@ -691,10 +700,10 @@
 			&:hover
 				color black
 
-//page video
-.p-video
-	.l-container
-		padding 0
+// //page video
+// .p-video
+// 	.l-container
+// 		padding 0
 
 .b-video-list
 	colsWrapFlex(1)

@@ -161,11 +161,14 @@
 						opacity 1
 						visibility visible
 						transition-delay 0s
+					
 	&__dropdown-wrap
 		background-color #fff
 		z-index 1
 		padding-left 8px
 		display none
+		@media $min_md
+			display block
 		&.js-act
 			display block		
 		@media $min_md

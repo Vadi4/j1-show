@@ -8,6 +8,10 @@ module.exports = {
 		"css/fontawesome.css",
 		"js/regular.js"
 	],
+	"wow": [
+		"dist/wow.js",
+		"css/libs/animate.css"
+	]
 	// "inputmask": [ // like maskedinput
 	// 	"dist/inputmask.js"
 	// ],

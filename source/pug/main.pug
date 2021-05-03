@@ -28,17 +28,17 @@ block content
 				+b('span').title-2.b-show__title Гостиный<br /> Двор
 				+b('span').title-3.b-show__subtitle  26 - 28 сентября 
 			+e('').row
-				+e('').col_left
+				+e('').col_left.nope-wow.nope-fadeInLeft
 					+e('').text
 						p Lorem ipsum dolor sit amet.
 						p Lorem ipsum dolor sit amet.
 						p Lorem ipsum dolor sit amet.
 				+e('').col_center
-					+b('').logo-wrap
+					+b('').logo-wrap.nope-wow.nope-fadeIn
 						+e('img')(src='../img/fon.jpg' alt='').img-fon
 						+e('img')(src='../img/frame-gray.png' alt='').img-frame
 						+e('img')(src='../img/j1.png' alt='').img-logo
-				+e('').col_right
+				+e('').col_right.nope-wow.nope-fadeInRight
 					+e('').text
 						p Lorem ipsum dolor sit amet.
 						p Lorem ipsum dolor sit amet.
@@ -48,121 +48,130 @@ block content
 				+b('span').title-2.b-hero__title-2.b-title-2-up Экспонентам
 		+b('').main-card
 			+e('').col_sm
-				+b('a')(href='#').btn-shadow_active.b-main-card__btn-shadow Lorem
+				+b('a')(href='#' data-id="tab_1_1").btn-shadow_active.b-main-card__btn-shadow.js-tab-btn Lorem
 				+e('').text
 					p Lorem ipsum dolor sit amet.
-				+b('a')(href='#').btn-shadow.b-main-card__btn-shadow Lorem
-			+e('').col_noactive
-				+e('').col-row
-					+e('img')(src='../img/main.jpg' alt='').img
-					+b('a')(href='#').btn.b-main-card__btn
-						span Подробнее	
+				+b('a')(href='#' data-id="tab_1_2").btn-shadow.b-main-card__btn-shadow.js-tab-btn Lorem
+				+e('').text
+					p Lorem ipsum dolor sit amet.
 			+e('').col
-				+b('form').form
-					+b('input')(type='text' size='40' placeholder='Ф.И.О' aria-required='true' aria-invalid='false').input.b-form__input
-					+b('input')(type='text' size='40' placeholder='Название компании' aria-required='true' aria-invalid='false').input.b-form__input
-					+b('input')(type='tell' size='40' placeholder='Телефон' aria-required='true' aria-invalid='false').input.b-form__input
-					+b('input')(type='email' size='40' placeholder='Email' aria-required='true' aria-invalid='false').input.b-form__input
-					+b('textarea')(name='textarea' placeholder='Сообщение'  cols='40' rows='10' aria-invalid='false' ).textarea.b-form__textarea
-					+b('').checkbox.b-form__input
-						+e('input')(type='checkbox' id='checkbox' value='1').form-input
-						+e('label')(for='checkbox').form-label Я соглашаюсь с <a href="#"><span>политекой</span></a> обработки персональных данных
-					+b('input')(type='submit' value="Отправить").btn.b-form__btn
+				+e('')(data-id="tab_1_1").content.js-act
+					+b('form').form
+						+b('input')(type='text' size='40' placeholder='Ф.И.О').input.b-form__input
+						+b('input')(type='text' size='40' placeholder='Название компании').input.b-form__input
+						+b('input')(type='tell' size='40' placeholder='Телефон').input.b-form__input
+						+b('input')(type='email' size='40' placeholder='Email').input.b-form__input
+						+b('textarea')(name='textarea' placeholder='Сообщение'  cols='40' rows='10' ).textarea.b-form__textarea
+						+b('').checkbox.b-form__input
+							+e('input')(type='checkbox' id='checkbox' value='1').form-input
+							+e('label')(for='checkbox').form-label Я соглашаюсь с <a href="#"><span>политекой</span></a> обработки персональных данных
+						+b('input')(type='submit' value="Отправить").btn.b-form__btn
+				+e('')(data-id="tab_1_2").content
+					+e('').col-row
+						+e('img')(src='../img/main.jpg' alt='').img
+						+b('a')(href='#').btn.b-main-card__btn
+							span Подробнее
 		+b('section').hero
 			+e('').title-wrap
 				+b('span').title-2.b-hero__title-2.b-title-2-up Посетителям	
 		+b('').main-card
 			+e('').col
-				+b('form').form
-					+b('input')(type='text' size='40' placeholder='Ф.И.О' aria-required='true' aria-invalid='false').input.b-form__input
-					+b('input')(type='tell' size='40' placeholder='Телефон' aria-required='true' aria-invalid='false').input.b-form__input
-					+b('input')(type='email' size='40' placeholder='Email' aria-required='true' aria-invalid='false').input.b-form__input
-					+b('textarea')(name='textarea' placeholder='Сообщение'  cols='40' rows='10' aria-invalid='false' ).textarea.b-form__textarea
-					+b('').checkbox.b-form__input
-						+e('input')(type='checkbox' id='checkbox' value='1').form-input
-						+e('label')(for='checkbox').form-label Я соглашаюсь с <a href="#"><span>политекой</span></a> обработки персональных данных
-					+b('input')(type='submit' value="Отправить").btn.b-form__btn
-			+e('').col_noactive
-				+e('').col-row
-					+e('img')(src='../img/main.jpg' alt='').img
-					+b('a')(href='#').btn.b-main-card__btn
-						span Подробнее	
-			+e('').col_sm
-				+b('a')(href='#').btn-shadow_active.b-main-card__btn-shadow lorem
-				+e('').text
-					p Lorem ipsum dolor sit amet.
-				+b('a')(href='#').btn-shadow.b-main-card__btn-shadow lorem
-	block content					 
-		+b('').show-dark
-			+b('section').hero
-				+e('').title-wrap
-					+b('span').title-2.b-hero__title-2.b-title-2-up Возможности
-			+b('').show
-				+e('').row
-					+e('').col_left
-						+b('span').title-3.b-show__title_dark  Экспонентам
-						+e('').text
-							p Lorem ipsum dolor sit amet.
-							p Lorem ipsum dolor sit amet.
-							p Lorem ipsum dolor sit amet.
-					+e('').col_center
-						+b('').logo-wrap
-								+e('img')(src='../img/fon.jpg' alt='').img-fon_dark
-								+e('img')(src='../img/frame-white.png' alt='').img-frame_dark
-								+e('img')(src='../img/new-logo-white.png' alt='').img-logo_dark
-					+e('').col_right
-						+b('span').title-3.b-show__title_dark Посетителям
-						+e('').text
-							p Lorem ipsum dolor sit amet.
-							p Lorem ipsum dolor sit amet.
-							p Lorem ipsum dolor sit amet.
-		.l-container
-			+b('section').hero_buttom
-				+e('').title-wrap
-					+b('span').title-2.b-hero__title-2.b-title-2-up Конкурс	
-			+b('').main-card
-				+e('').col_sm
-					+b('a')(href='#').btn-shadow_active.b-main-card__btn-shadow lorem
-					+e('').text
-						p Lorem ipsum dolor sit amet.
-					+b('a')(href='#').btn-shadow.b-main-card__btn-shadow lorem
-				+e('').col_noactive
-					+e('').col-row
-						+e('img')(src='../img/main.jpg' alt='').img
-						+b('a')(href='#').btn.b-main-card__btn
-							span Подробнее					
-				+e('').col
+				+e('')(data-id="tab_2_1").content.js-act
 					+b('form').form
-						+b('select').select.b-form__input
-							option option 1
-							option option 2
-						+b('input')(type='text' size='40' placeholder='Ф.И.О' aria-required='true' aria-invalid='false').input.b-form__input
-						+b('input')(type='text' size='40' placeholder='Название компании' aria-required='true' aria-invalid='false').input.b-form__input
-						+b('input')(type='tell' size='40' placeholder='Телефон' aria-required='true' aria-invalid='false').input.b-form__input
-						+b('input')(type='email' size='40' placeholder='Email' aria-required='true' aria-invalid='false').input.b-form__input
-						+b('textarea')(name='textarea' placeholder='Сообщение'  cols='40' rows='10' aria-invalid='false' ).textarea.b-form__textarea
-						+b('input')(type='file' size='40' placeholder='Не выбран ни один файл' aria-required='true' aria-invalid='false').input.b-form__input
+						+b('input')(type='text' size='40' placeholder='Ф.И.О').input.b-form__input
+						+b('input')(type='tell' size='40' placeholder='Телефон').input.b-form__input
+						+b('input')(type='email' size='40' placeholder='Email').input.b-form__input
+						+b('textarea')(name='textarea' placeholder='Сообщение'  cols='40' rows='10' ).textarea.b-form__textarea
 						+b('').checkbox.b-form__input
 							+e('input')(type='checkbox' id='checkbox' value='1').form-input
 							+e('label')(for='checkbox').form-label Я соглашаюсь с <a href="#"><span>политекой</span></a> обработки персональных данных
 						+b('input')(type='submit' value="Отправить").btn.b-form__btn
-			+b('section').hero
-				+e('').title-wrap
-					+b('span').title-2.b-hero__title-2.b-title-2-up Конгресс	
-			+b('').main-card_animal
-				+e('').col
+				+e('')(data-id="tab_2_2").content
 					+e('').col-row
 						+e('img')(src='../img/main.jpg' alt='').img
 						+b('a')(href='#').btn.b-main-card__btn
 							span Подробнее
-				+e('').col_noactive
+			+e('').col_sm
+				+b('a')(href='#' data-id="tab_2_1").btn-shadow_active.b-main-card__btn-shadow.js-tab-btn lorem
+				+e('').text
+					p Lorem ipsum dolor sit amet.
+				+b('a')(href='#' data-id="tab_2_2").btn-shadow.b-main-card__btn-shadow.js-tab-btn lorem
+				+e('').text
+					p Lorem ipsum dolor sit amet.
+	+b('').show-dark
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2.b-title-2-up Возможности
+		+b('').show
+			+e('').row
+				+e('').col_left
+					+b('span').title-3.b-show__title_dark.nope-wow.nope-fadeInLeft  Экспонентам
+					+e('').text
+						p Lorem ipsum dolor sit amet.
+						p Lorem ipsum dolor sit amet.
+						p Lorem ipsum dolor sit amet.
+				+e('').col_center
+					+b('').logo-wrap
+						+e('img')(src='../img/fon.jpg' alt='').img-fon_dark
+						+e('img')(src='../img/frame-white.png' alt='').img-frame_dark
+						+e('img')(src='../img/new-logo-white.png' alt='').img-logo_dark
+				+e('').col_right
+					+b('span').title-3.b-show__title_dark.nope-wow.nope-fadeInRight Посетителям
+					+e('').text
+						p Lorem ipsum dolor sit amet.
+						p Lorem ipsum dolor sit amet.
+						p Lorem ipsum dolor sit amet.
+	.l-container
+		+b('section').hero_buttom
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2.b-title-2-up Конкурс	
+		+b('').main-card
+			+e('').col_sm
+				+b('a')(href='#' data-id="tab_3_1").btn-shadow_active.b-main-card__btn-shadow.js-tab-btn lorem
+				+e('').text
+					p Lorem ipsum dolor sit amet.
+				+b('a')(href='#' data-id="tab_3_2").btn-shadow.b-main-card__btn-shadow.js-tab-btn lorem
+				+e('').text
+					p Lorem ipsum dolor sit amet.				
+			+e('').col
+				+e('')(data-id="tab_3_1").content
 					+e('').col-row
 						+e('img')(src='../img/main.jpg' alt='').img
 						+b('a')(href='#').btn.b-main-card__btn
-							span Подробнее		
-				+e('').col_sm
-					+b('a')(href='#').btn-shadow_active.b-main-card__btn-shadow lorem
-					+e('').text
-						p Lorem ipsum dolor sit amet.
-					+b('a')(href='#').btn-shadow.b-main-card__btn-shadow lorem
+							span Подробнее
+				+e('')(data-id="tab_3_2").content.js-act
+					+b('form').form
+						+b('select').select.b-form__input
+							option option 1
+							option option 2
+						+b('input')(type='text' size='40' placeholder='Ф.И.О').input.b-form__input
+						+b('input')(type='text' size='40' placeholder='Название компании').input.b-form__input
+						+b('input')(type='tell' size='40' placeholder='Телефон').input.b-form__input
+						+b('input')(type='email' size='40' placeholder='Email').input.b-form__input
+						+b('textarea')(name='textarea' placeholder='Сообщение'  cols='40' rows='10' ).textarea.b-form__textarea
+						+b('input')(type='file' size='40' placeholder='Не выбран ни один файл').input.b-form__input
+						+b('').checkbox.b-form__input
+							+e('input')(type='checkbox' id='checkbox' value='1').form-input
+							+e('label')(for='checkbox').form-label Я соглашаюсь с <a href="#"><span>политикой</span></a> обработки персональных данных
+						+b('input')(type='submit' value="Отправить").btn.b-form__btn
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2.b-title-2-up Конгресс
+		+b('').main-card_animal
+			+e('').col
+				+e('')(data-id="tab_4_1").content.js-act
+					+e('').col-row
+						+e('img')(src='../img/main.jpg' alt='').img
+						+b('a')(href='#').btn.b-main-card__btn
+							span Подробнее
+				+e('')(data-id="tab_4_2").content
+					+e('').col-row
+						+e('img')(src='../img/main.jpg' alt='').img
+						+b('a')(href='#').btn.b-main-card__btn
+							span Подробнее
+			+e('').col_sm
+				+b('a')(href='#' data-id="tab_4_1").btn-shadow_active.b-main-card__btn-shadow.js-tab-btn lorem
+				+e('').text
+					p Lorem ipsum dolor sit amet.
+				+b('a')(href='#' data-id="tab_4_2").btn-shadow.b-main-card__btn-shadow.js-tab-btn lorem
 	
