@@ -109,6 +109,7 @@ ready(() => {
 				let $outContent = $target.closest('.b-main-card').querySelector('.b-main-card__content.js-act');
 				slideUp( $outContent );
 				$outContent.classList.remove('js-act');
+				
 				let $actContent = document.querySelector('.b-main-card__content[data-id='+dataId+']');
 				slideDown( $actContent );
 				$actContent.classList.add('js-act');
@@ -116,5 +117,19 @@ ready(() => {
 			}
 		} 
 	});
+
+	let scrollTopBtn = document.querySelectorAll('.js-scroll-top');
+	if( scrollTopBtn ) {
+		scrollTopBtn.forEach( btn => {
+			btn.addEventListener('click', e => {
+				e.preventDefault();
+				window.scrollTo({ top: 0, behavior: 'smooth' })
+			});
+		});
+	};
+
+	let showHideScrollBtn = () => {
+		
+	};
 
 });
