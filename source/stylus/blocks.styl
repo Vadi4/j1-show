@@ -15,6 +15,10 @@
 	right 20px
 	bottom 20px
 	cursor pointer
+	transition .25s opacity, .25s visibility
+	&.hide
+		opacity 0
+		visibility hidden
 	
 .l-footer
 	background-color #4A4242
@@ -620,6 +624,8 @@
 
 //page gallery
 .b-gallery
+	&:not(.js-act)
+		display none
 	containerWrapFlex(1, 10, 10)
 	@media $min_xsm
 		containerWrapFlex(2, 10, 10)
@@ -627,8 +633,6 @@
 		containerWrapFlex(3, 10, 10)
 	@media $min_md
 		containerWrapFlex(3, 10, 10)
-
-.b-gallery
 	&__item
 		position relative
 		&:before
@@ -639,6 +643,10 @@
 			transition all .800s ease-in-out
 		&:hover:before
 			background rgba(0,0,0,0.5)
+		&.animated
+			-webkit-animation-duration: .5s;
+			animation-duration: .5s;
+	
 
 .b-btn-box
 	display flex

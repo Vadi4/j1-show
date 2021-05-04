@@ -12,13 +12,17 @@ block content
 				+b('span').title-2.b-hero__title-2 История J-1
 		+b('').widgets
 			+b('').btn-box
-				+b('a')(href='#').btn.b-btn-box__btn_active 
+				+b('a')(href='#' data-id="gallery_1").btn.b-btn-box__btn_active.js-gallery-tab
 					span Все события 
-				+b('a')(href='#').btn.b-btn-box__btn
+				+b('a')(href='#' data-id="gallery_2").btn.b-btn-box__btn.js-gallery-tab
 					span Конкурс
-				+b('a')(href='#').btn.b-btn-box__btn
-					span Выстовка
-			+b('').gallery
+				+b('a')(href='#' data-id="gallery_3").btn.b-btn-box__btn.js-gallery-tab
+					span Выставка
+			+b('')(data-id="gallery_1").gallery.js-act
+				- for(var i = 0; i < 12; i++)
+					+e('a')(href='#').item
+						+e('img')(src='../img/history.jpg' alt='history').item-img
+			+b('')(data-id="gallery_2").gallery
 				- for(var i = 0; i < 12; i++)
 					+e('a')(href='#').item
 						+e('img')(src='../img/history.jpg' alt='history').item-img

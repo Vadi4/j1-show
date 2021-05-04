@@ -67,6 +67,21 @@ let slideToggle = (target, duration = 500) => {
 	}
 };
 
+let scrollTopBtn = document.querySelector('.js-scroll-top');
+
+let showHideScrollBtn = () => {
+	if( document.documentElement.clientHeight > window.pageYOffset ) {
+		scrollTopBtn.classList.add('hide');
+	} else {
+		scrollTopBtn.classList.remove('hide');
+	}
+};
+
+
+window.addEventListener('scroll', function() {
+	showHideScrollBtn();
+});
+
 ready(() => {
 
 	let $burger = document.querySelector('.js-burger');
@@ -118,18 +133,67 @@ ready(() => {
 		} 
 	});
 
-	let scrollTopBtn = document.querySelectorAll('.js-scroll-top');
 	if( scrollTopBtn ) {
-		scrollTopBtn.forEach( btn => {
-			btn.addEventListener('click', e => {
-				e.preventDefault();
-				window.scrollTo({ top: 0, behavior: 'smooth' })
-			});
+		scrollTopBtn.addEventListener('click', e => {
+			e.preventDefault();
+			window.scrollTo({ top: 0, behavior: 'smooth' })
 		});
 	};
 
-	let showHideScrollBtn = () => {
-		
-	};
+	document.addEventListener('click', (e) => {
+		let $target = e.target.closest('.js-gallery-tab');
+
+		if( $target ) {
+			e.preventDefault();
+			if( !$target.classList.contains('.b-btn-box__btn_active') ) {
+				$target.closest('.b-btn-box').querySelector('.b-btn-box__btn_active').classList.remove('b-btn-box__btn_active');
+				$target.classList.add('b-btn-box__btn_active');
+
+				let dataId = $target.getAttribute('data-id');
+
+				let $actGallery = document.querySelector('.b-gallery.js-act');
+				let $newGallery = document.querySelector('.b-gallery[data-id='+dataId+']');
+
+				galleryOut( $actGallery );
+				galleryIn( $newGallery );
+
+			}
+
+			document.querySelector('.b-btn-box').style.pointerEvents = 'none';
+
+			setTimeout( (e) => {
+				document.querySelector('.b-btn-box').style.pointerEvents = '';
+			}, 1000);
+		}
+	});
+
+	let galleryOut = (gallery) => {
+		gallery.querySelectorAll('.b-gallery__item').forEach( el => {
+			el.classList.add('wow', 'animated', 'zoomOut');
+		});
+		setTimeout( (e) => {
+			gallery.classList.remove('js-act');
+			gallery.querySelectorAll('.b-gallery__item').forEach( el => {
+				el.classList.remove('wow', 'animated', 'zoomOut');
+			});			
+		}, 500);
+	}
+
+	let galleryIn = (gallery) => {
+		setTimeout( (e) => {
+			gallery.classList.add('js-act');
+			gallery.querySelectorAll('.b-gallery__item').forEach( el => {
+				el.classList.add('wow', 'animated', 'zoomIn');
+			});
+
+			setTimeout( (e) => {
+				gallery.querySelectorAll('.b-gallery__item').forEach( el => {
+					el.classList.remove('wow', 'animated', 'zoomIn');
+				});
+			}, 500);
+
+		}, 500);
+
+	}
 
 });
