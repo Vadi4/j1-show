@@ -494,6 +494,12 @@
 	@media $min_md
 		colsWrapFlex(2)
 		overflow visible
+		
+.b-news-item
+	img
+		margin 40px 0
+		@media $min_md
+			margin 40px 58px
 
 .b-card-file
 	display flex
@@ -517,8 +523,10 @@
 		order 0
 		transition all .3s ease-in-out
 		border-radius 10px
+		max-width 50%
+		flex-basis 50%
 	&__img
-			transition all .3s ease-in-out
+		transition all .3s ease-in-out
 	&__featured
 		box-shadow 0px 5px 25px -8px rgba(0,0,0,0.5)
 		transition all .3s ease-in-out
