@@ -109,6 +109,7 @@ ready(() => {
 		let $target = e.target.closest('.js-tab-btn');
 
 		if( $target ) {
+			e.preventDefault();
 			if( !$target.classList.contains('b-btn-shadow_active') ) {
 
 				e.preventDefault();
