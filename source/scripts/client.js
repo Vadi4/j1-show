@@ -85,19 +85,22 @@ window.addEventListener('scroll', function() {
 ready(() => {
 
 	if( document.querySelector('.js-history-carousel') ) {
-		let slider = tns({
-			container: '.js-history-carousel',
-			gutter: 20,
-			nav: false,
-			controlsContainer: ".js-nav-controls",
-			responsive: {
-				0: {
-					items: 2
-				},
-				1024: {
-					items: 3
+		document.querySelectorAll('.js-history-carousel').forEach( carouselEl => {
+			let $navContainer = carouselEl.closest('.b-history-carousel-wrap').querySelector('.js-nav-controls'); 
+			let slider = tns({
+				container: carouselEl,
+				gutter: 20,
+				nav: false,
+				controlsContainer: $navContainer,
+				responsive: {
+					0: {
+						items: 2
+					},
+					1024: {
+						items: 3
+					}
 				}
-			}
+			});
 		});
 	}
 
