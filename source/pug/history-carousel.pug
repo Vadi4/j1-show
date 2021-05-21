@@ -1,0 +1,23 @@
+extends template.pug
+
+block title
+	title history
+	- var page_class = 'p-text top-right';
+	- var page_bg = '../img/ring-draw6.jpg';
+
+block content
+	.l-container
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2 История J-1
+		+b('').history-carousel-wrap
+			+b('').nav-wrap.js-nav-controls.b-history-carousel-wrap__nav-wrap
+				+b('button').carousel-arr_prev
+					i.fa.fa-arrow-left
+				+b('button').carousel-arr_next
+					i.fa.fa-arrow-right
+			+b('').history-carousel.js-history-carousel
+				- for(var i = 0; i < 12; i++)
+					div
+						A(href='#').b-gallery__item
+							IMG(src='../img/history.jpg' alt='history').b-gallery__item-img

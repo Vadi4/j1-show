@@ -14,6 +14,7 @@
   "dependencies": {
     "normalize": "./source/stylus/vendor-css/normalize.css",
     "Font-Awesome": "^5.15.3",
-    "wow": "wow.js#^1.1.2"
+    "wow": "wow.js#^1.1.2",
+    "tiny-slider": "^2.9.3"
   }
 }

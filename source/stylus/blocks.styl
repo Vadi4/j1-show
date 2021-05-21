@@ -19,6 +19,35 @@
 	&.hide
 		opacity 0
 		visibility hidden
+		
+.b-history-carousel-wrap
+	position relative
+	margin-bottom 42px
+	&:last-child
+		margin-bottom 0
+	@media $min_md
+		padding 0 56px
+	@media (min-width: 1300px)
+		padding 0
+	&__nav-wrap
+		display none
+		@media $min_md
+			display block
+		.b-carousel-arr
+			position absolute
+			vAlign()
+			&_prev
+				left 12px
+				@media (min-width: 1300px)
+					left -48px
+			&_next
+				right 12px
+				@media (min-width: 1300px)
+					right -48px
+			
+.b-carousel-arr
+	font-size 30px
+	background-color transparent
 	
 .l-footer
 	background-color #4A4242
@@ -643,6 +672,7 @@
 		containerWrapFlex(3, 10, 10)
 	&__item
 		position relative
+		display block
 		&:before
 			content ''
 			position absolute

@@ -84,6 +84,23 @@ window.addEventListener('scroll', function() {
 
 ready(() => {
 
+	if( document.querySelector('.js-history-carousel') ) {
+		let slider = tns({
+			container: '.js-history-carousel',
+			gutter: 20,
+			nav: false,
+			controlsContainer: ".js-nav-controls",
+			responsive: {
+				0: {
+					items: 2
+				},
+				1024: {
+					items: 3
+				}
+			}
+		});
+	}
+
 	let $burger = document.querySelector('.js-burger');
 	let $menu = document.querySelector('.b-header-nav');
 

@@ -1,9 +1,9 @@
 module.exports = {
 	// VANILLA-PLUGINS
-	// "tiny-slider": [ // analog of owl-carousel
-	// 	"dist/tiny-slider.js",
-	// 	"dist/tiny-slider.css"
-	// ],
+	"tiny-slider": [ // analog of owl-carousel
+		"dist/tiny-slider.js",
+		"dist/tiny-slider.css"
+	],
 	"Font-Awesome": [
 		"css/fontawesome.css",
 		"js/regular.js"
