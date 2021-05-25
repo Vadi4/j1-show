@@ -84,6 +84,15 @@ window.addEventListener('scroll', function() {
 
 ready(() => {
 
+	let $fancyImg = document.querySelectorAll('.js-history-carousel');
+	if( $fancyImg ) {
+		$fancyImg.forEach( el => {
+			lightGallery(el, {
+				selector: '.b-gallery__item'
+			});
+		});
+	}	
+
 	if( document.querySelector('.js-history-carousel') ) {
 		document.querySelectorAll('.js-history-carousel').forEach( carouselEl => {
 			let $navContainer = carouselEl.closest('.b-history-carousel-wrap').querySelector('.js-nav-controls'); 

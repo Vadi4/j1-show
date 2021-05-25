@@ -11,7 +11,11 @@ module.exports = {
 	"wow": [
 		"dist/wow.js",
 		"css/libs/animate.css"
-	]
+	],
+	"lightgallery.js": [
+		"dist/js/lightgallery.js",
+		"dist/css/lightgallery.css"
+	],	
 	// "inputmask": [ // like maskedinput
 	// 	"dist/inputmask.js"
 	// ],

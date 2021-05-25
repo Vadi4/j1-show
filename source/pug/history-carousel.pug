@@ -19,5 +19,16 @@ block content
 			+b('').history-carousel.js-history-carousel
 				- for(var i = 0; i < 12; i++)
 					div
-						A(href='#').b-gallery__item
+						A(href='../img/history.jpg').b-gallery__item
+							IMG(src='../img/history.jpg' alt='history').b-gallery__item-img
+		+b('').history-carousel-wrap
+			+b('').nav-wrap.js-nav-controls.b-history-carousel-wrap__nav-wrap
+				+b('button').carousel-arr_prev
+					i.fa.fa-arrow-left
+				+b('button').carousel-arr_next
+					i.fa.fa-arrow-right
+			+b('').history-carousel.js-history-carousel
+				- for(var i = 0; i < 12; i++)
+					div
+						A(href='../img/history.jpg').b-gallery__item
 							IMG(src='../img/history.jpg' alt='history').b-gallery__item-img
