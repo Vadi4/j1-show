@@ -25,35 +25,39 @@ block content
 			+e('').cols-wrap
 				+e('').col-1
 					+e('').sticky
-						+b('a')(href='#').btn-shadow._active
+						+b('a')(href='#' data-id="line_1").btn-shadow.js-act.js-tab-link
 							span Lorem
-						+b('a')(href='#').btn-shadow
+						+b('a')(href='#' data-id="line_2").btn-shadow.js-tab-link
 							span Lorem
-						+b('a')(href='#').btn-shadow
+						+b('a')(href='#' data-id="line_3").btn-shadow.js-tab-link
 							span Lorem
-						+b('a')(href='#').btn-shadow
+						+b('a')(href='#' data-id="line_4").btn-shadow.js-tab-link
 							span Lorem
 				+e('').col-2
-					+e('').double-down
-						i.fa.fa-angle-double-down
-					+b('').timeline-track
-						+e('').text-wrap.b-order-text
-							+e('span').text Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-						+e('').icon-wrap.b-order-icon
-							i.fa.fa-book.point-icon-inner
-						+e('').time-wrap.b-order-time
-							+e('span').time 10:30-11:00
-					+b('').timeline-track
-						+e('').text-wrap
-							+e('span').text Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-						+e('').icon-wrap
-							i.fa.fa-book.point-icon-inner
-						+e('').time-wrap
-							+e('span').time 10:30-11:00
-					+b('').timeline-track
-						+e('').text-wrap.b-order-text
-							+e('span').text Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-						+e('').icon-wrap.b-order-icon
-							i.fa.fa-book.point-icon-inner
-						+e('').time-wrap.b-order-time
-							+e('span').time 10:30-11:00
+					.l-content-tab(data-tab-id="line_1").js-content-tab.js-act
+						.l-line-wrap
+							+e('').double-down
+								i.fa.fa-angle-double-down
+							+b('').timeline-track
+								+e('').text-wrap.b-order-text
+									+e('span').text Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+								+e('').icon-wrap.b-order-icon
+									i.fa.fa-book.point-icon-inner
+								+e('').time-wrap.b-order-time
+									+e('span').time 10:30-11:00
+							+b('').timeline-track
+								+e('').text-wrap
+									+e('span').text Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+								+e('').icon-wrap
+									i.fa.fa-book.point-icon-inner
+								+e('').time-wrap
+									+e('span').time 10:30-11:00
+							+b('').timeline-track
+								+e('').text-wrap.b-order-text
+									+e('span').text Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+								+e('').icon-wrap.b-order-icon
+									i.fa.fa-book.point-icon-inner
+								+e('').time-wrap.b-order-time
+									+e('span').time 10:30-11:00
+					.l-content-tab(data-tab-id="line_2").js-content-tab
+						+b('span').title-2 tab 2

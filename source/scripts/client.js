@@ -77,12 +77,47 @@ let showHideScrollBtn = () => {
 	}
 };
 
+let getSiblings = (elem) => {
+	let siblings = [];
+	var sibling = elem.parentNode.firstChild;
+
+	while (sibling) {
+		if (sibling.nodeType === 1 && sibling !== elem) {
+			siblings.push(sibling);
+		}
+		sibling = sibling.nextSibling
+	};
+
+	return siblings;
+};
+
 
 window.addEventListener('scroll', function() {
 	showHideScrollBtn();
 });
 
 ready(() => {
+
+	document.addEventListener('click', (e) => {
+		let $target = e.target.closest('.js-tab-link');
+
+		if( $target ) {
+			e.preventDefault();
+			let dataId = $target.getAttribute('data-id');
+
+			$target.classList.remove('js-act');
+
+			getSiblings($target).forEach( el => {
+				el.classList.remove('js-act');
+			});
+
+			let $actTab = document.querySelector('.js-content-tab[data-tab-id='+dataId+']');
+			$actTab.classList.add('js-act');
+			getSiblings($actTab).forEach( el => {
+				el.classList.remove('js-act');
+			});
+		}
+	});	
 
 	let $fancyImg = document.querySelectorAll('.js-history-carousel');
 	if( $fancyImg ) {

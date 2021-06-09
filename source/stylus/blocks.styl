@@ -21,6 +21,11 @@
 		opacity 0
 		visibility hidden
 		
+.l-content-tab
+	display none
+	&.js-act
+		display block
+		
 .b-history-carousel-wrap
 	position relative
 	margin-bottom 42px
@@ -945,6 +950,18 @@
 			font-weight 700
 
 //congress
+
+.l-line-wrap
+	position relative
+	&:after
+		content ''
+		position absolute
+		top 0
+		left 50%
+		height 100%
+		border-left 1px solid black
+		z-index 1
+
 .b-congress
 	@media $min_sm
 		&__col-1
@@ -953,14 +970,7 @@
 		&__col-2
 			flex-basis 78%
 			max-width 100%
-			&:after
-				content ''
-				position absolute
-				top 0
-				left 50%
-				height 100%
-				border-left 1px solid black
-				z-index 1
+
 		.b-order-text
 			order 1
 			.b-timeline-track__text
