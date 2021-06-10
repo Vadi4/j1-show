@@ -105,7 +105,7 @@ ready(() => {
 			e.preventDefault();
 			let dataId = $target.getAttribute('data-id');
 
-			$target.classList.remove('js-act');
+			$target.classList.add('js-act');
 
 			getSiblings($target).forEach( el => {
 				el.classList.remove('js-act');
