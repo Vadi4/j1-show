@@ -1,7 +1,7 @@
-let ready = (callback) => {
-	if (document.readyState != "loading") callback();
-	else document.addEventListener("DOMContentLoaded", callback);
-}
+// let ready = (callback) => {
+// 	if (document.readyState != "loading") callback();
+// 	else document.addEventListener("DOMContentLoaded", callback);
+// }
 
 let slideUp = (target, duration = 500) => {
 	target.style.transitionProperty = 'height, margin, padding';

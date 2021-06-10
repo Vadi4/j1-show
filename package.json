@@ -45,6 +45,7 @@
     "require-dir": "^1.0.0"
   },
   "dependencies": {
+    "im-popup": "^1.0.0",
     "normalize.css": "^3.0.3"
   }
 }

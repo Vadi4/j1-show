@@ -15,7 +15,11 @@ module.exports = {
 	"lightgallery.js": [
 		"dist/js/lightgallery.js",
 		"dist/css/lightgallery.css"
-	],	
+	],
+	"im-popup": [
+		"../../node_modules/im-popup/dist/css/main.css",
+		"../../node_modules/im-popup/dist/js/index.js"
+	]
 	// "inputmask": [ // like maskedinput
 	// 	"dist/inputmask.js"
 	// ],
