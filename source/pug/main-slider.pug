@@ -1,0 +1,27 @@
+extends template.pug
+
+block title
+	title main
+	- var page_class = 'p-main';
+
+block content
+	+b('').main-screen
+		+b('')(data-timeout="5000").main-carousel.js-main-carousel
+			+e('')(style="background-image: url(http://placehold.it/1905x924/008000)").slide
+			+e('')(style="background-image: url(http://placehold.it/1905x924/0037ff)").slide
+			+e('')(style="background-image: url(http://placehold.it/1905x924/fcff72)").slide
+		+e('').content
+			+e('').col
+				+b('a')(href='#').btn_dark-transparent.b-main-screen__btn
+					span Lorem, <br />ipsum.
+					+b('svg').svg.b-main-screen__svg
+						+e('polyline')(points="0 0, 200 0, 200 80, 0 80, 0 0").pol-border.b-main-screen__pol-border
+						+e('polyline')(points="0 0, 200 0, 200 80, 0 80, 0 0").pol-animal.b-main-screen__pol-animal
+			+e('').col
+				+b('img')(src='../img/new-logo-white.png' alt='logo' role='presentation').logo.b-main-screen__logo
+		+b('').btn-arow.b-main-screen__btn-arrow
+			i.btn-icon.button-after.fa.fa-chevron-down
+		+e('').dots-wrap.js-dots-wrap
+			button
+			button
+			button

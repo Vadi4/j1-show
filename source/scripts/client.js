@@ -148,6 +148,24 @@ ready(() => {
 		});
 	}
 
+	let mainGallery = document.querySelector('.js-main-carousel'); 
+	if( mainGallery ) {
+		let autoplayTime = +mainGallery.getAttribute('data-timeout');
+		let mainCarousel = tns({
+			container: mainGallery,
+			items: 1,
+			nav: true,
+			mode: "gallery",
+			animateIn: "jello",
+			animateOut: "rollOut",
+			speed: 1000,
+			autoplay: true,
+			autoplayTimeout: autoplayTime,
+			navContainer: '.js-dots-wrap',
+			controls: false
+		});
+	}
+
 	let $burger = document.querySelector('.js-burger');
 	let $menu = document.querySelector('.b-header-nav');
 
