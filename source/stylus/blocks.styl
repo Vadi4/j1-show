@@ -954,7 +954,7 @@
 .l-line-wrap
 	position relative
 	&:after
-		@media $min_xsm
+		@media $min_sm
 			content ''
 			position absolute
 			top 0
@@ -1051,6 +1051,8 @@
 		order 3
 		width 100%
 		padding 10px 0 30px 0
+		@media $min_md
+			width calc(50% - 25px)
 	&__text
 		display block
 		padding-left 135px
@@ -1058,8 +1060,10 @@
 		order 2
 		position relative
 		display grid
-		width 100px
+		// width 100px
+		width 50px
 		height 50px
+		flex-shrink 0
 		align-items center
 		background #fff
 		border-radius 50%
@@ -1085,6 +1089,8 @@
 		width 100%
 		margin-top 13.5px
 		text-align right
+		@media $min_md
+			width calc(50% - 25px)
 	&__time
 		position relative
 		font-family "Montserrat", Sans-serif
@@ -1129,7 +1135,7 @@
 			padding-left 15px
 		&__icon-wrap
 			order 1
-			width 70px
+			// width 70px
 			&:before
 				border 0
 		&__time-wrap
