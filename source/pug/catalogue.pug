@@ -15,14 +15,14 @@ block content
 				- for(var i = 0; i < 11; i++)
 					+e('').col
 						+b('article').card-file
-							+e('').content-img
+							+e('').content-img_full
 								+e('a')(href='#').featured
 									+e('img')(src="../img/ps.jpg" alt='alrosa technology').img
-							+e('').bottom
-								+e('a')(href='#').bottom-title Alrosa technology
-								+e('').button
-									a(href='#')
-										span Подробнее
-										+e('').btn-arrow
-											+b('i')(aria-hidden="true").btn-arrow-show.nope-fa.nope-fa-chevron-right 
-											+b('i')(aria-hidden="true").btn-arrow-show-hide.nope-fa.nope-fa-chevron-right
+								+e('').hover-wrap
+									+e('a')(href='#').bottom-title Alrosa technology
+									+e('').button
+										a(href='#')
+											span Подробнее
+											+e('').btn-arrow
+												+b('i')(aria-hidden="true").btn-arrow-show.nope-fa.nope-fa-chevron-right 
+												+b('i')(aria-hidden="true").btn-arrow-show-hide.nope-fa.nope-fa-chevron-right
