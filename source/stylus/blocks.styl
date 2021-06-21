@@ -558,7 +558,8 @@
 	&__col
 		padding 30px 15px
 		position relative
-	@media $min_sm
+	// @media $min_sm
+	@media $min_xsm
 		colsWrapFlex(2)
 		overflow visible
 	@media	$max_xs
@@ -606,6 +607,8 @@
 			max-width 100%
 	&__img
 		transition all .3s ease-in-out
+		width 100%
+		height auto
 	&__hover-wrap
 		position absolute
 		stick()
