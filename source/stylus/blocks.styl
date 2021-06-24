@@ -612,8 +612,8 @@
 	&__hover-wrap
 		position absolute
 		stick()
-		opacity 0
-		visibility hidden
+		// opacity 0
+		// visibility hidden
 		color #fff
 		display flex
 		align-items center
@@ -627,6 +627,9 @@
 				color #fff
 				text-align center
 			&__button
+				opacity 0
+				visibility hidden
+				transition .25s opacity, .25s visibility
 				a
 					color #fff
 				.b-btn-arrow-show,
@@ -637,11 +640,14 @@
 	&:hover
 		.b-card-file
 			&__hover-wrap
-				opacity 1
-				visibility visible
+				// opacity 1
+				// visibility visible
 				.b-card-file
 					&__bottom-title
 						color #fff
+			&__button
+				opacity 1
+				visibility visible
 	&__featured
 		box-shadow 0px 5px 25px -8px rgba(0,0,0,0.5)
 		transition all .3s ease-in-out
