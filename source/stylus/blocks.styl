@@ -1015,14 +1015,21 @@
 		&:hover 
 			color #747474
 	&__img-wrap
-		display flex
-		justify-content center
-		height max-content
+		// display flex
+		// justify-content center
+		// height max-content
+		// flex-basis 100%
+		// max-width 100%
+		padding 10px
 		flex-basis 100%
 		max-width 100%
-		padding 10px
 		@media $min_xsm
 			padding-right 30px
+		img
+			display table
+			margin 0 auto
+			max-width 100%
+			height auto
 
 .b-catalog-item
 	@media $min_sm
