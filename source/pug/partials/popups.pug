@@ -5,8 +5,10 @@
 				+e('a').close &#10008;
 				+b('span').title-1.b-popup__title Зарегистрироваться
 				+b('form').form
-					+b('input')(type='text' size='40' placeholder='Ваша почта').input.b-form__input
-					+b('input')(type='text' size='40' placeholder='Ваше имя и фамилия').input.b-form__input
+					+b('input')(type='text' placeholder='Ваше имя и фамилия').input.b-form__input
+					+b('input')(type='text' placeholder='Компания').input.b-form__input
+					+b('input')(type='text' placeholder='Телефон' data-mask="+7 (999) 999-99-99").input.b-form__input
+					+b('input')(type='text' placeholder='Ваша почта').input.b-form__input
 					p Хочу присоединиться к онлайн трансляции
 					+e('').box-row
 						+b('').radiobox.b-form__radio

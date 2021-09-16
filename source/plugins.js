@@ -19,10 +19,10 @@ module.exports = {
 	"im-popup": [
 		"../../node_modules/im-popup/dist/css/main.css",
 		"../../node_modules/im-popup/dist/js/index.js"
-	]
-	// "inputmask": [ // like maskedinput
-	// 	"dist/inputmask.js"
-	// ],
+	],
+	"inputmask": [ // like maskedinput
+		"dist/inputmask.js"
+	],
 	// "overlayScrollbars": [
 	// 	"js/OverlayScrollbars.js",
 	// 	"css/OverlayScrollbars.css"

@@ -91,12 +91,24 @@ let getSiblings = (elem) => {
 	return siblings;
 };
 
+function inputMask(elem) {
+    elem.forEach(el => {
+        let mask = el.getAttribute('data-mask');
+        Inputmask({ "mask": mask }).mask(el);
+    });
+};
 
 window.addEventListener('scroll', function() {
 	showHideScrollBtn();
 });
 
 ready(() => {
+
+    let maskedInputs = document.querySelectorAll('[data-mask]');
+
+    if(maskedInputs.length) {
+        inputMask(maskedInputs)
+    }  	
 
 	document.addEventListener('click', (e) => {
 		let $target = e.target.closest('.js-tab-link');
