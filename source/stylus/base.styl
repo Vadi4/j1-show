@@ -367,8 +367,8 @@ textarea
 						&:after
 							opacity 1
 						&:before
-							background-color #4286f4
-							border-color #4286f4
+							background-color #000
+							border-color #000
 	&__label
 		display block
 		position relative
@@ -429,11 +429,19 @@ textarea
 body
 	.b-popup
 		height auto 
+		border-radius 0
+		flex-direction column
 .b-popup
 	width 600px
-	padding 60px
+	padding 80px 60px
 	background-color #fff
 	position relative
+	&__title
+		&.b-title-1
+			margin-bottom 32px
+	.b-form
+		p
+			text-align left
 	
 	// &__close
 	// 	display inline-flex

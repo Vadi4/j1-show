@@ -1,5 +1,18 @@
 .im-popups
-	.im-popup#popup
+	.im-popup#registr
 		.im-popup-inside
 			+b('').popup
 				+e('a').close &#10008;
+				+b('span').title-1.b-popup__title Зарегистрироваться
+				+b('form').form
+					+b('input')(type='text' size='40' placeholder='Ваша почта').input.b-form__input
+					+b('input')(type='text' size='40' placeholder='Ваше имя и фамилия').input.b-form__input
+					p Хочу присоединиться к онлайн трансляции
+					+e('').box-row
+						+b('').radiobox.b-form__radio
+							+e('input')(type='radio' id='join_true' name='join').input
+							+e('label')(for='join_true').label Да
+						+b('').radiobox.b-form__radio
+							+e('input')(type='radio' id='join_false' name='join').input
+							+e('label')(for='join_false').label Нет
+					+b('button')(type="submit").btn.b-form__btn Зарегистрироваться
