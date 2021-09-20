@@ -160,6 +160,24 @@ ready(() => {
 		});
 	}
 
+	let $parntersCarousel = document.querySelector('.js-partners-carousel'); 
+	if( $parntersCarousel ) {
+		let slider = tns({
+			container: $parntersCarousel,
+			gutter: 50,
+			loop: true,
+			controlsText: ['<i class="fa fa-arrow-left"></i>', '<i class="fa fa-arrow-right"></i>'],
+			responsive: {
+				0: {
+					items: 2
+				},
+				1024: {
+					items: 4
+				}
+			}
+		});
+	}
+
 	let mainGallery = document.querySelector('.js-main-carousel'); 
 	if( mainGallery ) {
 		let autoplayTime = +mainGallery.getAttribute('data-timeout');
