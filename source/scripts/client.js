@@ -315,5 +315,12 @@ ready(() => {
 		}
 
 	}
-
 });
+
+function afterLoad() {
+  let maskedInputs = document.querySelectorAll('[data-mask]');
+
+  if (maskedInputs.length) {
+    inputMask(maskedInputs)
+  } 
+}
