@@ -7,10 +7,18 @@ block title
 block content
 	+b('').main-screen
 		+b('')(data-timeout="5000").main-carousel.js-main-carousel
-			+e('')(style="background-image: url(../img/slide_1.png)").slide
-			+e('')(style="background-image: url(../img/slide_2.png)").slide
-			+e('')(style="background-image: url(../img/slide_3.png)").slide
-			+e('')(style="background-image: url(../img/slide_4.png)").slide
+			div
+				+e('')(style="background-image: url(../img/slide_1.png)").slide.nope-d-none-md
+				+e('')(style="background-image: url(../img/slide_1.png)").slide.nope-d-none-max-sm
+			div
+				+e('')(style="background-image: url(../img/slide_2.png)").slide.nope-d-none-md
+				+e('')(style="background-image: url(../img/slide_2.png)").slide.nope-d-none-max-sm
+			div
+				+e('')(style="background-image: url(../img/slide_3.png)").slide.nope-d-none-md
+				+e('')(style="background-image: url(../img/slide_3.png)").slide.nope-d-none-max-sm
+			div
+				+e('')(style="background-image: url(../img/slide_4.png)").slide.nope-d-none-md
+				+e('')(style="background-image: url(../img/slide_4.png)").slide.nope-d-none-max-sm
 		+e('').content
 			+e('').col
 				+b('a')(href='#').btn_dark-transparent.b-main-screen__btn
