@@ -92,10 +92,10 @@ let getSiblings = (elem) => {
 };
 
 function inputMask(elem) {
-    elem.forEach(el => {
-        let mask = el.getAttribute('data-mask');
-        Inputmask({ "mask": mask }).mask(el);
-    });
+	elem.forEach(el => {
+		let mask = el.getAttribute('data-mask');
+		Inputmask({ "mask": mask }).mask(el);
+	});
 };
 
 window.addEventListener('scroll', function() {
@@ -104,11 +104,33 @@ window.addEventListener('scroll', function() {
 
 ready(() => {
 
-    let maskedInputs = document.querySelectorAll('[data-mask]');
+	// FLUID IFRAMES YOUTUBE
+	const $allVideos = document.querySelectorAll("iframe");
+	$allVideos.forEach( video => {
+		video.setAttribute('aspectRatio', video.clientHeight/video.clientWidth);
+		video.setAttribute('height', '');
+		video.setAttribute('width', '');
+	});
 
-    if(maskedInputs.length) {
-        inputMask(maskedInputs)
-    }  	
+	let setVideoSizes = () => {
+		$allVideos.forEach( video => {
+			video.setAttribute('width', '100%');
+			video.setAttribute('height', video.clientWidth * video.getAttribute('aspectRatio'));
+		})
+	};
+
+	setVideoSizes();
+
+	window.addEventListener('resize', () => {
+		setVideoSizes();
+	});
+	// END FLUID IFRAMES YOUTUBE
+
+	let maskedInputs = document.querySelectorAll('[data-mask]');
+
+	if(maskedInputs.length) {
+		inputMask(maskedInputs)
+	}  	
 
 	document.addEventListener('click', (e) => {
 		let $target = e.target.closest('.js-tab-link');
@@ -321,6 +343,6 @@ function afterLoad() {
   let maskedInputs = document.querySelectorAll('[data-mask]');
 
   if (maskedInputs.length) {
-    inputMask(maskedInputs)
+	inputMask(maskedInputs)
   } 
 }
