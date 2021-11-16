@@ -104,10 +104,15 @@ window.addEventListener('scroll', function() {
 
 ready(() => {
 
+	window.addEventListener('resize', () => {
+		setVideoSizes();
+	});
+
 	// FLUID IFRAMES YOUTUBE
 	const $allVideos = document.querySelectorAll("iframe");
 	$allVideos.forEach( video => {
 		video.setAttribute('aspectRatio', video.clientHeight/video.clientWidth);
+		video.setAttribute('aspectRatioWidth', video.clientWidth/video.clientHeight);
 		video.setAttribute('height', '');
 		video.setAttribute('width', '');
 	});
@@ -116,6 +121,10 @@ ready(() => {
 		$allVideos.forEach( video => {
 			video.setAttribute('width', '100%');
 			video.setAttribute('height', video.clientWidth * video.getAttribute('aspectRatio'));
+			if( video.clientHeight < video.closest('.b-main-screen__video-container').clientHeight ) {
+				video.setAttribute('height', '100%');
+				video.setAttribute('width', video.clientHeight * video.getAttribute('aspectRatioWidth') );
+			}
 		})
 	};
 
