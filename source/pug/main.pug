@@ -12,11 +12,14 @@ block content
 			+e('').mob-bg
 		+e('').content
 			+e('').col
-				+b('a')(href='#').btn_dark-transparent.b-main-screen__btn 
-					span Lorem, <br />ipsum.
-					+b('svg').svg.b-main-screen__svg
-						+e('polyline')(points="0 0, 200 0, 200 80, 0 80, 0 0").pol-border.b-main-screen__pol-border
-						+e('polyline')(points="0 0, 200 0, 200 80, 0 80, 0 0").pol-animal.b-main-screen__pol-animal
+				+b('a')(href="#").btn_white-bg.b-main-screen__btn-base Международная выставка-конгресс "Евразия
+				+b('a')(href="#").btn_white-bg.b-main-screen__btn-base «Московская международная выставка-конгресс J-1»
+				+b('a')(href="#").btn_white-bg.b-main-screen__btn-base «Московская международная выставка-конгресс J-1»
+				// +b('a')(href='#').btn_dark-transparent.b-main-screen__btn 
+				// 	span Международная выставка-конгресс "Евразия
+				// 	+b('svg').svg.b-main-screen__svg
+				// 		+e('polyline')(points="0 0, 200 0, 200 80, 0 80, 0 0").pol-border.b-main-screen__pol-border
+				// 		+e('polyline')(points="0 0, 200 0, 200 80, 0 80, 0 0").pol-animal.b-main-screen__pol-animal
 			+e('').col
 				+b('img')(src='../img/new-logo-white.png' alt='logo' role='presentation').logo.b-main-screen__logo
 		+b('').btn-arow.b-main-screen__btn-arrow._bottom
@@ -180,6 +183,20 @@ block content
 				+e('').text
 					p Lorem ipsum dolor sit amet.
 				+b('a')(href='#' data-id="tab_4_2").btn-shadow.b-main-card__btn-shadow.js-tab-btn lorem
+		+b('section').hero
+			+e('').title-wrap
+				+b('span').title-2.b-hero__title-2.b-title-2-up Новости
+		+b('').main-card
+			+e('').articles-top
+				+b('a')(href='#').btn.b-form__btn Все новости 
+			+e('').articles-row
+				- for(var i = 0; i < 4; i++)
+					+e('').article-col
+						+b('article').news-card-row
+							+e('a')(href="#" style="background-image: url(http://placehold.it/224x200);").img-wrap
+							+e('').content
+								+e('span').title «Московская международная выставка-конгресс J-1»
+								+b('a')(href="#").btn.b-form__btn.b-news-card-row__btn Читать
 		+b('section').hero
 			+e('').title-wrap
 				+b('span').title-2.b-hero__title-2.b-title-2-up Партнеры

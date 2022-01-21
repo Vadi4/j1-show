@@ -136,6 +136,9 @@
 	&__social
 		&.b-social
 			margin-top 15px
+			margin-bottom 15px
+	&__form
+		text-align left
 	&__container
 		@media $min_xsm
 			display flex
@@ -262,12 +265,17 @@
 	// 	width 100%
 	// 	height 100%
 	// 	object-fit cover
+	&__btn-base
+		&:not(:last-child)
+			margin-bottom 24px
 	&__btn
 		font-size 20px
-		font-weight 200
+		// font-weight 200
 		cursor pointer
-		color white
+		// color white
 		text-align left
+		color black
+		font-weight 400		
 		&:hover 
 			.b-svg__pol-animal
 				stroke-dashoffset: -420
@@ -281,11 +289,12 @@
 		height 80px
 		stroke-width 3px
 	&__pol-border
-		fill rgba(0, 0, 0, 0.58)
 		stroke #3B3B3B
 		font-size 20px
 		font-weight 200
 		letter-spacing -0.015em
+		// fill rgba(0, 0, 0, 0.58)
+		fill rgba(255,255,255,.9)
 	&__pol-animal
 		letter-spacing -0.015em
 		stroke-dasharray 20 420
@@ -387,6 +396,43 @@
 			flex-basis 60.47%
 			&_sm
 				flex-basis 39.52%
+	&__articles-row
+		display flex
+		flex-wrap wrap
+		margin -10px
+	&__article-col
+		padding 10px
+		flex-basis 100%
+		max-width 100%
+		@media $min_sm
+			flex-basis 50%
+			max-width 50%
+	&__articles-top
+		display flex
+		margin-bottom 24px
+		width 100%
+		justify-content flex-end
+		
+.b-news-card-row
+	box-shadow 0 2px 27px -10px rgba(0 0 0 .33)
+	border 1px solid #bbb
+	display flex
+	&__content
+		padding 20px
+	&__img-wrap
+		height 200px
+		width 40%
+		flex-shrink 0
+		background-position center
+		background-repeat no-repeat
+		background-size cover
+	&__title
+		-webkit-line-clamp 4
+		display -webkit-box
+		-webkit-box-orient vertical
+		overflow hidden
+	&__btn
+		margin-top 24px
 
 .b-show-dark
 	padding 8rem 0 
@@ -978,6 +1024,9 @@
 		margin-bottom 27px
 		&:not(.b-checkbox)
 			padding 3.75px 7.5px
+		&_sm
+			height 40px
+			margin-bottom 18px
 	&__select
 		padding-left 30px
 		height 56px
