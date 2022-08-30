@@ -209,6 +209,32 @@ ready(() => {
 		});
 	}
 
+	let $baseGallery = document.querySelectorAll('.js-base-gallery');
+	if( $baseGallery.length ) {
+
+		$baseGallery.forEach( gallery => {
+
+			let slider = tns({
+				container: gallery,
+				loop: false,
+				mouseDrag: true,
+				controlsText: ['<i class="fa fa-arrow-left"></i>', '<i class="fa fa-arrow-right"></i>'],
+				responsive: {
+					0: {
+						items: 2,
+						gutter 25
+					},
+					1024: {
+						items: 3,
+						gutter: 50
+					}
+				}
+			});
+
+		})
+
+	}
+
 	let mainGallery = document.querySelector('.js-main-carousel'); 
 	if( mainGallery ) {
 		let autoplayTime = +mainGallery.getAttribute('data-timeout');

@@ -87,6 +87,39 @@ h1, h2, h3, h4, h5, .b-title-1, .b-title-2, .b-title-3, .b-title-4, .b-title-5
   }
 }
 
+.b-base-gallery
+	margin 36px 0
+	position relative
+	@media $min_md
+		margin 48px 0
+	.tns-slider
+		display flex
+		align-items center
+		img
+			margin 0 auto
+	.tns-inner
+		padding-left 40px
+		padding-right 40px
+		box-sizing border-box
+		@media $min_lg
+			padding-left 0
+			padding-right 0
+	.tns-controls
+		button
+			background-color transparent
+			padding 12px
+			position absolute
+			top calc(50% - 10px)
+			z-index 3
+			&:first-child
+				left 0
+				@media $min_lg
+					transform translateX(-150%)
+			&:last-child
+				right 0
+				@media $min_lg
+					transform translateX(150%)		
+
 
 h1, .b-title-1
 	font-size 25px
