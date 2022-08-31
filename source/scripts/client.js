@@ -222,7 +222,7 @@ ready(() => {
 				responsive: {
 					0: {
 						items: 2,
-						gutter 25
+						gutter: 25
 					},
 					1024: {
 						items: 3,
